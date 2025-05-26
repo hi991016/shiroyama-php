@@ -60,7 +60,7 @@
                                     ),
                                     'order' => 'DESC',
                                     'paged' => $paged,
-                                    'posts_per_page' => 20
+                                    'posts_per_page' => 2
                                 );
                                 $the_query = new WP_Query( $args );           
                             ?>
@@ -99,21 +99,9 @@
                         </div>
                     </div>
                 </div>
-
+                
                 <div class="news_controls" data-fadein>
-                    <div class="news_pager newer">
-                        <a href="#">＜　新しい記事</a>
-                    </div>
-                    <div class="news_center">
-                        <a href="#" class="--active">1</a>
-                        <a href="#">2</a>
-                        <a href="#">3</a>
-                        <p>...</p>
-                        <a href="#">99</a>
-                    </div>
-                    <div class="news_pager older">
-                        <a href="#">古い記事　＞</a>
-                    </div>
+                    <?php echo news_pagination($the_query->max_num_pages, $paged, home_url("/news/$current_slug")); ?>
                 </div>
             </div>
         </section>

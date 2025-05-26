@@ -76,80 +76,6 @@
         register_taxonomy( 'news_tax', 'news', $args );
     }
     
-    function pagination_tdc($post_type, $wp_query, $paged, $cat = "", $filter = "") {
-        if( $wp_query->max_num_pages <= 1 ) return;
-        $paged = $paged;
-        $max = intval( $wp_query->max_num_pages );
-       
-        if ( $paged >= 1 ) $links[] = $paged;
-        if ( $paged >= 3 ) {
-               $links[] = $paged - 1;
-               $links[] = $paged - 2;
-        }
-        if ( ( $paged + 2 ) <= $max ) {
-               $links[] = $paged + 2;
-               $links[] = $paged + 1;
-        }
-
-        $html = '';
-
-        if ($paged > 1 && $max > 1) {
-            $html .= '<a class="c-page_pager pager-newer" href="'.build_url($post_type, $cat, ($paged - 1), $filter).'" ><p>Newer <span>Posts</span></p></a>';
-        } else if ($paged >= 0) {
-            $html .= '<div class="c-page_pager pager-newer"><p></p></div>';
-        }
-
-        $html .= '<div class="c-pagination c-page_center" data-cat="'.$cat.'" role="navigation">' . "\n";
-        // if ($paged > 1 && $max > 1) {
-        //     $html .= '<a class="item" href="'.build_url($post_type, $cat, ($paged - 1), $filter).'" >prev</a>';
-        // }
-        if ( ! in_array( 1, $links ) ) {
-            $class = 1 == $paged ? ' class="item current"' : '';
-            if(!$class) {
-                $html .= '<a class="item" href="'.build_url($post_type, $cat, 1, $filter).'" >1</a>';
-            } else {
-                $html .= '<a '.$class.'>1</a>';
-            }
-            if ( ! in_array( 2, $links ) )
-                $html .= '<a>…</a>';
-        }
-        sort( $links );
-
-        foreach ( (array) $links as $link ) {
-            $class = $paged == $link ? ' class="item current"' : '';
-            if(!$class) {
-                $html .= '<a class="item" href="'.build_url($post_type, $cat, $link, $filter).'">'.$link .'</a>' . "\n";
-            } else {
-                $html .= '<a '.$class.'>'. $link .'</a>';
-            }
-        }
-
-        if (!in_array( $max, $links ) ) {
-            if ( ! in_array( $max - 1, $links ) ) $html .= '<a class="item">…</a>' . "\n";
-            // $class = $paged == $max ? ' class="item"' : '';
-            $html .= '<a class="item" href="'.build_url($post_type, $cat, $max, $filter).'">'.$max.'</a>';
-        }
-        // if ($paged < $max && $max > 1) {
-        //     $html .= '<a class="item" href="'.build_url($post_type, $cat, ($paged + 1), $filter).'" >next</a>';
-        // }
-        $html .= '</div>' . "\n";
-        
-        if ($paged < $max && $max > 1) {
-            $html .= '<a class="c-page_pager pager-older" href="'.build_url($post_type, $cat, ($paged + 1), $filter).'" ><p>Older <span>Posts</span></p></a>';
-        }
-        return $html;
-    }
-    function build_url($post_type, $cat, $paged, $filter){
-        if ($cat) {
-            $url = home_url('/'.$post_type.'/page/'.$paged).'/?cate='.$cat;
-        } elseif ($filter) {
-            $url = home_url('/'.$post_type.'/page/'.$paged).'/?'.$filter;
-        } else {
-            $url = home_url('/'.$post_type.'/page/'.$paged);
-        }
-        return $url;
-    }
-    
     function add_page_to_admin_menu() {
     }
     add_action( 'admin_menu', 'add_page_to_admin_menu' );
@@ -177,15 +103,6 @@
     }, 100);
 
     // ========= change title to id ==========
-    function custom_news_archive_rewrite() {
-        add_rewrite_rule(
-            '^news/?$',
-            'index.php?post_type=news',
-            'top'
-        );
-    }
-    add_action('init', 'custom_news_archive_rewrite');
-
     function custom_news_permalinks() {
         // Rule archive /news/
         add_rewrite_rule(
@@ -199,18 +116,31 @@
             'index.php?post_type=news&p=$matches[1]',
             'top'
         );
+        // Pagination rules for archive /news/page/[num]/
+        add_rewrite_rule(
+            '^news/page/([0-9]+)/?$',
+            'index.php?post_type=news&paged=$matches[1]',
+            'top'
+        );
+        // Pagination rules for taxonomy /news/[term]/page/[num]/
+        add_rewrite_rule(
+            '^news/([^/]+)/page/([0-9]+)/?$',
+            'index.php?news_tax=$matches[1]&paged=$matches[2]',
+            'top'
+        );
     }
     add_action('init', 'custom_news_permalinks');
 
-    // setting permarlink
+    //
     function custom_news_post_link($post_link, $post) {
-        if ($post->post_type === 'news') {
+        if ($post->post_type === 'news' && $post->ID) {
             return home_url('/news/' . $post->ID . '/');
         }
         return $post_link;
     }
     add_filter('post_type_link', 'custom_news_post_link', 10, 2);
-    
+
+    //
     function check_taxonomy_rewrite() {
         $taxonomy = get_taxonomy('news_tax');
         if ($taxonomy && $taxonomy->rewrite) {
@@ -218,6 +148,67 @@
         }
     }
     add_action('init', 'check_taxonomy_rewrite');
+
+    // ========= custom pagination ==========
+    function news_pagination($total_pages, $paged, $base_url) {
+        if ($total_pages <= 1) return '';
+        $html = '<div class="news_pager newer">';
+        if ($paged > 1) {
+            $prev_page = $paged - 1;
+            $html .= sprintf('<a href="%s/page/%d/">＜ 新しい記事</a>', esc_url($base_url), $prev_page);
+        }
+        $html .= '</div>';
+        $html .= '<div class="news_center">';
+
+        $range = 2; // Number of pages to show around the current page
+        $showitems = ($range * 2) + 1;
+
+        if ($total_pages <= $showitems) {
+            // Display all pages if total is small
+            for ($i = 1; $i <= $total_pages; $i++) {
+                $class = ($i == $paged) ? ' class="--active"' : '';
+                $html .= sprintf('<a href="%s/page/%d/"%s>%d</a>', esc_url($base_url), $i, $class, $i);
+            }
+        } else {
+            // Display first page
+            $class = (1 == $paged) ? ' class="--active"' : '';
+            $html .= sprintf('<a href="%s/page/1/"%s>1</a>', esc_url($base_url), $class);
+
+            // Calculate start and end of page numbers
+            $start = max(2, $paged - $range);
+            $end = min($total_pages - 1, $paged + $range);
+
+            // Add ellipsis if there’s a gap after the first page
+            if ($start > 2) {
+                $html .= '<span>...</span>';
+            }
+
+            // Display pages around current page
+            for ($i = $start; $i <= $end; $i++) {
+                $class = ($i == $paged) ? ' class="--active"' : '';
+                $html .= sprintf('<a href="%s/page/%d/"%s>%d</a>', esc_url($base_url), $i, $class, $i);
+            }
+
+            // Add ellipsis if there’s a gap before the last page
+            if ($end < $total_pages - 1) {
+                $html .= '<span>...</span>';
+            }
+
+            // Display last page
+            $class = ($total_pages == $paged) ? ' class="--active"' : '';
+            $html .= sprintf('<a href="%s/page/%d/"%s>%d</a>', esc_url($base_url), $total_pages, $class, $total_pages);
+        }
+
+        $html .= '</div>';
+        $html .= '<div class="news_pager older">';
+        if ($paged < $total_pages) {
+            $next_page = $paged + 1;
+            $html .= sprintf('<a href="%s/page/%d/">古い記事 ＞</a>', esc_url($base_url), $next_page);
+        }
+        $html .= '</div>';
+        $html .= '</div>';
+        return $html;
+    }
 
     // ========= Add meta box to 'news' post type =========
     function add_pin_post_meta_box() {

@@ -42,25 +42,63 @@
                 <div class="news_list">
                     <div class="c-news">
                         <div class="c-news_list">
-                            
+                        <?php
+                        $paged = get_query_var('paged') ? get_query_var('paged') : 1;
+                        $args = [
+                            'post_type' => 'news',
+                            'post_status' => 'publish',
+                            'posts_per_page' => 2,
+                            'order' => 'DESC',
+                            'orderby' => 'date',
+                            'paged' => $paged
+                        ];
+                        $the_query = new WP_Query($args);
+                        if ($the_query->have_posts()) :
+                            while ($the_query->have_posts()) : $the_query->the_post();
+                                $cate = get_the_terms(get_the_ID(), 'news_tax');
+                                $p = !empty($cate) && is_array($cate) ? $cate[0] : null;
+                        ?>
+                            <div data-fadein>
+                                <a href="<?php the_permalink(); ?>" class="c-news_items">
+                                    <div class="c-news_group">
+                                        <p class="date"><?php echo get_the_date('Y.m.d'); ?></p>
+                                        <p class="category --<?php echo $p ? $p->slug : 'default'; ?>">
+                                            <?php echo $p ? $p->name : 'Chưa có danh mục'; ?>
+                                        </p>
+                                    </div>
+                                    <div class="c-news_title">
+                                        <p class="title"><?php the_title(); ?></p>
+                                        <div class="arrow">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="27.414" height="12.828"
+                                                viewBox="0 0 27.414 12.828">
+                                                <g id="Group_51" data-name="Group 51"
+                                                    transform="translate(-1332 -606.586)">
+                                                    <line id="Line_3" data-name="Line 3" x2="25"
+                                                        transform="translate(1333 613)" fill="none" stroke="#000"
+                                                        stroke-linecap="round" stroke-width="2" />
+                                                    <line id="Line_4" data-name="Line 4" x1="5" y1="5"
+                                                        transform="translate(1353 608)" fill="none" stroke="#000"
+                                                        stroke-linecap="round" stroke-width="2" />
+                                                    <line id="Line_5" data-name="Line 5" y1="5" x2="5"
+                                                        transform="translate(1353 613)" fill="none" stroke="#000"
+                                                        stroke-linecap="round" stroke-width="2" />
+                                                </g>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <?php   
+                                    endwhile;
+                                    wp_reset_postdata();
+                                endif; 
+                            ?>
                         </div>
                     </div>
                 </div>
 
                 <div class="news_controls" data-fadein>
-                    <div class="news_pager newer">
-                        <a href="#">＜　新しい記事</a>
-                    </div>
-                    <div class="news_center">
-                        <a href="#" class="--active">1</a>
-                        <a href="#">2</a>
-                        <a href="#">3</a>
-                        <p>...</p>
-                        <a href="#">99</a>
-                    </div>
-                    <div class="news_pager older">
-                        <a href="#">古い記事　＞</a>
-                    </div>
+                    <?php echo news_pagination($the_query->max_num_pages, $paged, home_url('/news')); ?>
                 </div>
             </div>
         </section>
