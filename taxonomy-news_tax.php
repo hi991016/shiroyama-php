@@ -60,6 +60,7 @@
                                     ),
                                     'order' => 'DESC',
                                     'paged' => $paged,
+                                    'posts_per_page' => 20
                                 );
                                 $the_query = new WP_Query( $args );           
                             ?>

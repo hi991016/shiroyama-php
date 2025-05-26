@@ -219,4 +219,60 @@
     }
     add_action('init', 'check_taxonomy_rewrite');
 
-    // ================================================
+    // ========= Add meta box to 'news' post type =========
+    function add_pin_post_meta_box() {
+        add_meta_box(
+            'pin_post_meta_box',
+            'Pin Post',
+            'render_pin_post_meta_box',
+            'news',
+            'side',
+            'high'
+        );
+    }
+    add_action('add_meta_boxes', 'add_pin_post_meta_box');
+
+    // Render meta box content
+    function render_pin_post_meta_box($post) {
+        $is_pinned = get_post_meta($post->ID, '_is_pinned', true);
+        // Add nonce for security
+        wp_nonce_field('pin_post_nonce', 'pin_post_nonce_field');
+        ?>
+        <label>
+            <input type="checkbox" name="is_pinned" value="1" <?php checked($is_pinned, '1'); ?>>
+            Pin this post
+        </label>
+        <?php
+    }
+
+    // Save meta data when post is saved
+    function save_pin_post_meta($post_id) {
+        // Verify nonce for security
+        if (!isset($_POST['pin_post_nonce_field']) || !wp_verify_nonce($_POST['pin_post_nonce_field'], 'pin_post_nonce')) {
+            return;
+        }
+        // Check user permissions
+        if (!current_user_can('edit_post', $post_id)) {
+            return;
+        }
+        // Save or delete pinned meta
+        if (isset($_POST['is_pinned']) && $_POST['is_pinned'] == '1') {
+            update_post_meta($post_id, '_is_pinned', '1');
+        } else {
+            delete_post_meta($post_id, '_is_pinned');
+        }
+    }
+    add_action('save_post_news', 'save_pin_post_meta');
+
+    // Add 'Pinned' column to admin post list
+    add_filter('manage_news_posts_columns', function($columns) {
+        $columns['is_pinned'] = 'Pinned';
+        return $columns;
+    });
+
+    // Display content for 'Pinned' column
+    add_action('manage_news_posts_custom_column', function($column, $post_id) {
+        if ($column === 'is_pinned') {
+            echo get_post_meta($post_id, '_is_pinned', true) ? '📌 Yes' : 'No';
+        }
+    }, 10, 2);

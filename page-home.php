@@ -49,7 +49,7 @@
                             <p>NEWS</p>
                         </div>
                         <div data-fadein>
-                            <a href="/news/" class="news_link">
+                            <a href="<?= home_url(); ?>/news/" class="news_link">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                                     <g id="Group_58" data-name="Group 58" transform="translate(-80 -650)">
                                         <path id="Polygon_1" data-name="Polygon 1" d="M3,0,6,5H0Z"
@@ -68,156 +68,100 @@
                     <div class="news_right">
                         <div class="c-news">
                             <div class="c-news_list">
-                                <div data-fadein>
-                                    <a href="/news/detail.html" class="c-news_items">
-                                        <div class="c-news_group">
-                                            <p class="date">2025.09.01</p>
-                                            <p class="category --info">INFO</p>
-                                        </div>
-                                        <div class="c-news_title">
-                                            <p class="title">
-                                                記事タイトルが入ります記事タイトルが入ります記事タイトル
-                                            </p>
-                                            <div class="arrow">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="27.414" height="12.828"
-                                                    viewBox="0 0 27.414 12.828">
-                                                    <g id="Group_51" data-name="Group 51"
-                                                        transform="translate(-1332 -606.586)">
-                                                        <line id="Line_3" data-name="Line 3" x2="25"
-                                                            transform="translate(1333 613)" fill="none" stroke="#000"
-                                                            stroke-linecap="round" stroke-width="2" />
-                                                        <line id="Line_4" data-name="Line 4" x1="5" y1="5"
-                                                            transform="translate(1353 608)" fill="none" stroke="#000"
-                                                            stroke-linecap="round" stroke-width="2" />
-                                                        <line id="Line_5" data-name="Line 5" y1="5" x2="5"
-                                                            transform="translate(1353 613)" fill="none" stroke="#000"
-                                                            stroke-linecap="round" stroke-width="2" />
-                                                    </g>
-                                                </svg>
+                                <?php 
+                                    // Get previous pinned post
+                                    $pinned_args = array(
+                                        'post_type'      => 'news',
+                                        'post_status'    => 'publish',
+                                        'posts_per_page' => 5, 
+                                        'meta_query'     => array(
+                                            array(
+                                                'key'     => '_is_pinned',
+                                                'value'   => '1',
+                                                'compare' => '='
+                                            )
+                                        ),
+                                        'orderby'        => 'date',
+                                        'order'          => 'DESC'
+                                    );
+                                    $pinned_query = new WP_Query($pinned_args);
+                                    $pinned_posts = $pinned_query->posts;
+                                    $pinned_count = count($pinned_posts);
+
+                                    // Calculate the number of unpinned posts to get
+                                    $remaining_posts = max(0, 5 - $pinned_count);
+
+                                    // Get unpinned post if needed
+                                    $non_pinned_args = array(
+                                        'post_type'      => 'news',
+                                        'post_status'    => 'publish',
+                                        'posts_per_page' => $remaining_posts,
+                                        'meta_query'     => array(
+                                            'relation' => 'OR',
+                                            array(
+                                                'key'     => '_is_pinned',
+                                                'compare' => 'NOT EXISTS'
+                                            ),
+                                            array(
+                                                'key'     => '_is_pinned',
+                                                'value'   => '0',
+                                                'compare' => '='
+                                            )
+                                        ),
+                                        'orderby'        => 'date',
+                                        'order'          => 'DESC'
+                                    );
+                                    $non_pinned_query = new WP_Query($non_pinned_args);
+                                    $all_posts = array_merge($pinned_posts, $non_pinned_query->posts);
+
+                                    // Limited to 5 posts only
+                                    $all_posts = array_slice($all_posts, 0, 5);
+
+                                    // show post
+                                    if (!empty($all_posts)) :
+                                        $i = 0;
+                                        foreach ($all_posts as $post) :
+                                            setup_postdata($post);
+                                            $news = get_field('news_fields', $post->ID);
+                                            $cate = get_the_terms($post->ID, 'news_tax');
+                                            $p = !empty($cate) && is_array($cate) ? $cate[0] : null;
+                                ?>
+                                            <div data-fadein>
+                                                <a href="<?php the_permalink($post->ID); ?>" class="c-news_items">
+                                                    <div class="c-news_group">
+                                                        <p class="date"><?php echo get_the_date('Y.m.d', $post->ID); ?></p>
+                                                        <p class="category --<?php echo $p ? $p->slug : 'default'; ?>">
+                                                            <?php echo $p ? $p->name : 'Chưa có danh mục'; ?>
+                                                        </p>
+                                                    </div>
+                                                    <div class="c-news_title">
+                                                        <p class="title"><?php echo get_the_title($post->ID); ?></p>
+                                                        <div class="arrow">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="27.414" height="12.828"
+                                                                viewBox="0 0 27.414 12.828">
+                                                                <g id="Group_51" data-name="Group 51"
+                                                                    transform="translate(-1332 -606.586)">
+                                                                    <line id="Line_3" data-name="Line 3" x2="25"
+                                                                        transform="translate(1333 613)" fill="none" stroke="#000"
+                                                                        stroke-linecap="round" stroke-width="2" />
+                                                                    <line id="Line_4" data-name="Line 4" x1="5" y1="5"
+                                                                        transform="translate(1353 608)" fill="none" stroke="#000"
+                                                                        stroke-linecap="round" stroke-width="2" />
+                                                                    <line id="Line_5" data-name="Line 5" y1="5" x2="5"
+                                                                        transform="translate(1353 613)" fill="none" stroke="#000"
+                                                                        stroke-linecap="round" stroke-width="2" />
+                                                                </g>
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                </a>
                                             </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div data-fadein>
-                                    <a href="/news/detail.html" class="c-news_items">
-                                        <div class="c-news_group">
-                                            <p class="date">2025.09.01</p>
-                                            <p class="category --event">EVENT</p>
-                                        </div>
-                                        <div class="c-news_title">
-                                            <p class="title">
-                                                記事タイトルが入ります記事タイトルが入ります
-                                            </p>
-                                            <div class="arrow">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="27.414" height="12.828"
-                                                    viewBox="0 0 27.414 12.828">
-                                                    <g id="Group_51" data-name="Group 51"
-                                                        transform="translate(-1332 -606.586)">
-                                                        <line id="Line_3" data-name="Line 3" x2="25"
-                                                            transform="translate(1333 613)" fill="none" stroke="#000"
-                                                            stroke-linecap="round" stroke-width="2" />
-                                                        <line id="Line_4" data-name="Line 4" x1="5" y1="5"
-                                                            transform="translate(1353 608)" fill="none" stroke="#000"
-                                                            stroke-linecap="round" stroke-width="2" />
-                                                        <line id="Line_5" data-name="Line 5" y1="5" x2="5"
-                                                            transform="translate(1353 613)" fill="none" stroke="#000"
-                                                            stroke-linecap="round" stroke-width="2" />
-                                                    </g>
-                                                </svg>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div data-fadein>
-                                    <a href="/news/detail.html" class="c-news_items">
-                                        <div class="c-news_group">
-                                            <p class="date">2025.09.01</p>
-                                            <p class="category --admission">ADMISSION</p>
-                                        </div>
-                                        <div class="c-news_title">
-                                            <p class="title">
-                                                記事タイトルが入ります記事タイトルが入ります
-                                            </p>
-                                            <div class="arrow">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="27.414" height="12.828"
-                                                    viewBox="0 0 27.414 12.828">
-                                                    <g id="Group_51" data-name="Group 51"
-                                                        transform="translate(-1332 -606.586)">
-                                                        <line id="Line_3" data-name="Line 3" x2="25"
-                                                            transform="translate(1333 613)" fill="none" stroke="#000"
-                                                            stroke-linecap="round" stroke-width="2" />
-                                                        <line id="Line_4" data-name="Line 4" x1="5" y1="5"
-                                                            transform="translate(1353 608)" fill="none" stroke="#000"
-                                                            stroke-linecap="round" stroke-width="2" />
-                                                        <line id="Line_5" data-name="Line 5" y1="5" x2="5"
-                                                            transform="translate(1353 613)" fill="none" stroke="#000"
-                                                            stroke-linecap="round" stroke-width="2" />
-                                                    </g>
-                                                </svg>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div data-fadein>
-                                    <a href="/news/detail.html" class="c-news_items">
-                                        <div class="c-news_group">
-                                            <p class="date">2025.09.01</p>
-                                            <p class="category --info">INFO</p>
-                                        </div>
-                                        <div class="c-news_title">
-                                            <p class="title">
-                                                記事タイトルが入ります記事タイトルが入ります
-                                            </p>
-                                            <div class="arrow">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="27.414" height="12.828"
-                                                    viewBox="0 0 27.414 12.828">
-                                                    <g id="Group_51" data-name="Group 51"
-                                                        transform="translate(-1332 -606.586)">
-                                                        <line id="Line_3" data-name="Line 3" x2="25"
-                                                            transform="translate(1333 613)" fill="none" stroke="#000"
-                                                            stroke-linecap="round" stroke-width="2" />
-                                                        <line id="Line_4" data-name="Line 4" x1="5" y1="5"
-                                                            transform="translate(1353 608)" fill="none" stroke="#000"
-                                                            stroke-linecap="round" stroke-width="2" />
-                                                        <line id="Line_5" data-name="Line 5" y1="5" x2="5"
-                                                            transform="translate(1353 613)" fill="none" stroke="#000"
-                                                            stroke-linecap="round" stroke-width="2" />
-                                                    </g>
-                                                </svg>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div data-fadein>
-                                    <a href="/news/detail.html" class="c-news_items">
-                                        <div class="c-news_group">
-                                            <p class="date">2025.09.01</p>
-                                            <p class="category --event">EVENT</p>
-                                        </div>
-                                        <div class="c-news_title">
-                                            <p class="title">
-                                                記事タイトルが入ります記事タイトルが入ります
-                                            </p>
-                                            <div class="arrow">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="27.414" height="12.828"
-                                                    viewBox="0 0 27.414 12.828">
-                                                    <g id="Group_51" data-name="Group 51"
-                                                        transform="translate(-1332 -606.586)">
-                                                        <line id="Line_3" data-name="Line 3" x2="25"
-                                                            transform="translate(1333 613)" fill="none" stroke="#000"
-                                                            stroke-linecap="round" stroke-width="2" />
-                                                        <line id="Line_4" data-name="Line 4" x1="5" y1="5"
-                                                            transform="translate(1353 608)" fill="none" stroke="#000"
-                                                            stroke-linecap="round" stroke-width="2" />
-                                                        <line id="Line_5" data-name="Line 5" y1="5" x2="5"
-                                                            transform="translate(1353 613)" fill="none" stroke="#000"
-                                                            stroke-linecap="round" stroke-width="2" />
-                                                    </g>
-                                                </svg>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
+                                <?php   
+                                        $i++;
+                                        endforeach;
+                                        wp_reset_postdata();
+                                    endif; 
+                                ?>
                             </div>
                         </div>
                     </div>
