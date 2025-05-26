@@ -47,7 +47,7 @@
                         $args = [
                             'post_type' => 'news',
                             'post_status' => 'publish',
-                            'posts_per_page' => 2,
+                            'posts_per_page' => 20,
                             'order' => 'DESC',
                             'orderby' => 'date',
                             'paged' => $paged
