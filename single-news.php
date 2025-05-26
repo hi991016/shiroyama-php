@@ -5,7 +5,7 @@
     get_header();
     
     $news = get_field('news_fields');
-    $tax_name = 'news_cate';
+    $tax_name = 'news_tax';
     $default_id = get_the_ID();
 
     $category = get_the_terms($default_id, $tax_name); 
@@ -34,7 +34,7 @@
                         <h2 class="title"><?= the_title(); ?></h2>
                         <div class="group">
                             <p class="date"><?= get_the_date('Y.m.d'); ?></p>
-                            <a href="<?= home_url(); ?>/news?category=<?= $category[0]->slug; ?>" class="category --<?= $category[0]->slug; ?>"><?= $category[0]->name ?></a>
+                            <a href="<?= home_url(); ?>/news/<?= $category[0]->slug; ?>" class="category --<?= $category[0]->slug; ?>"><?= $category[0]->name ?></a>
                         </div>
                     </div>
 

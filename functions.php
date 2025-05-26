@@ -44,38 +44,36 @@
                     'not_found_in_trash' => 'ゴミ箱に見つかりません',
                 ),
                 'public' => true,
-                'has_archive' => true,
+                'rewrite' => ['slug' => 'news/%post_id%', 'with_front' => false],
+                'has_archive' => 'news',
                 'menu_position' => 2,
                 'supports' => [ 'title', 'thumbnail', 'editor' ],
             )
         );	
     }
     
-    function create_taxonomy() {
+    add_action('init', 'create_news_taxonomies');
+    function create_news_taxonomies() {
+        // カテゴリを作成
         $labels = array(
-            'name' => _x( 'カテゴリー', 'taxonomy general name' ),
-            'singular_name' => _x( 'カテゴリー', 'taxonomy singular name' ),
-            'search_items' =>  __( 'カテゴリー検索' ),
-            'popular_items' => __( '人気のカテゴリ' ),
-            'all_items' => __( 'カテゴリー一覧' ),
-            'parent_item' => null,
-            'parent_item_colon' => null,
-            'edit_item' => __( 'カテゴリー編集' ), 
-            'update_item' => __( 'カテゴリーの更新' ),
-            'add_new_item' => __( 'カテゴリー新規追加' ),
-            'menu_name' => __( 'カテゴリー' ),
+            'name'                => 'Newsカテゴリ',
+            'singular_name'       => 'Newsカテゴリ',
+            'search_items'        => 'Newsカテゴリを検索',
+            'all_items'           => '全てのNewsカテゴリ',
+            'parent_item'         => '親カテゴリ',
+            'parent_item_colon'   => '親カテゴリ:',
+            'edit_item'           => 'Newsカテゴリを編集',
+            'update_item'         => 'Newsカテゴリを更新',
+            'add_new_item'        => 'Newsカテゴリを追加',
+            'new_item_name'       => '新規Newsカテゴリ',
+            'menu_name'           => 'Newsカテゴリ'
         );
-        
-        register_taxonomy('news_cate', 'news' ,array(
-            'labels'                     => $labels,
-            'hierarchical'               => true,
-            'rewrite'                    => array('slug' => 'news_cate', 'with_front' => true),
-            'public'                     => true,
-            'show_ui'                    => true,
-            'show_admin_column'          => true,
-            'show_in_nav_menus'          => true,
-            'show_tagcloud'              => true,
-        ));
+        $args = array(
+            'hierarchical'        => true,
+            'labels'              => $labels,
+            'rewrite'             => array( 'slug' => 'news' )
+        );
+        register_taxonomy( 'news_tax', 'news', $args );
     }
     
     function pagination_tdc($post_type, $wp_query, $paged, $cat = "", $filter = "") {
@@ -153,7 +151,6 @@
     }
     
     function add_page_to_admin_menu() {
-        // add_menu_page( 'Attention', 'Attention', 'manage_categories', 'post.php?post=8&action=edit', '','dashicons-admin-post', 3);
     }
     add_action( 'admin_menu', 'add_page_to_admin_menu' );
     add_action('init', 'initTheme');
@@ -161,10 +158,8 @@
     add_action( 'admin_menu', 'remove_menus' );
 	add_action( 'admin_bar_menu', 'remove_admin_bar_menus', 999 );
     add_action('init', 'create_post_type');
-    add_action( 'init', 'create_taxonomy', 0 );
     add_action('init', function() {
         remove_post_type_support('news', 'editor');
-        // remove_post_type_support('page', 'editor');
     }, 99);
 
     // =========
@@ -181,32 +176,47 @@
         }
     }, 100);
 
-    // =========
-    function my_php_Include($params = array()) {
-        extract(shortcode_atts(array('file' => 'default'), $params));
-        ob_start();
-        include(STYLESHEETPATH . "/news.php");
-        return ob_get_clean();
-    }
-    add_shortcode('myphp', 'my_php_Include');
-    
     // ========= change title to id ==========
-    function news_rewrite() {
-        global $wp_rewrite;
-        $queryarg = 'post_type=news&p=';
-        $wp_rewrite->add_rewrite_tag( '%news_id%', '([^/]+)', $queryarg );
-        $wp_rewrite->add_permastruct( 'news', '/news/%news_id%/', false );
-      }
-    add_action( 'init', 'news_rewrite' );
-      
-    function news_permalink( $post_link, $id = 0, $leavename ) {
-        global $wp_rewrite;
-        $post = &get_post( $id );
-        if ( is_wp_error( $post ) || get_post_type($post) != 'news')
-        return $post_link;
-        $newlink = $wp_rewrite->get_extra_permastruct( 'news' );
-        $newlink = home_url( user_trailingslashit( $newlink ) );
-        $newlink = str_replace( '%news_id%', $post->ID, $newlink );
-        return $newlink;
+    function custom_news_archive_rewrite() {
+        add_rewrite_rule(
+            '^news/?$',
+            'index.php?post_type=news',
+            'top'
+        );
     }
-    add_filter('post_type_link', 'news_permalink', 1, 3);
+    add_action('init', 'custom_news_archive_rewrite');
+
+    function custom_news_permalinks() {
+        // Rule archive /news/
+        add_rewrite_rule(
+            '^news/?$',
+            'index.php?post_type=news',
+            'top'
+        );
+        // Rule /news/123/
+        add_rewrite_rule(
+            '^news/([0-9]+)/?$',
+            'index.php?post_type=news&p=$matches[1]',
+            'top'
+        );
+    }
+    add_action('init', 'custom_news_permalinks');
+
+    // setting permarlink
+    function custom_news_post_link($post_link, $post) {
+        if ($post->post_type === 'news') {
+            return home_url('/news/' . $post->ID . '/');
+        }
+        return $post_link;
+    }
+    add_filter('post_type_link', 'custom_news_post_link', 10, 2);
+    
+    function check_taxonomy_rewrite() {
+        $taxonomy = get_taxonomy('news_tax');
+        if ($taxonomy && $taxonomy->rewrite) {
+            error_log(print_r($taxonomy->rewrite, true));
+        }
+    }
+    add_action('init', 'check_taxonomy_rewrite');
+
+    // ================================================
