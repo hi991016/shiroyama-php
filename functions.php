@@ -31,7 +31,7 @@
         register_post_type(
             'news',
             array(
-                'label' => 'News',
+                'label' => 'NEWS',
                 'labels' => array(
                     'all_items' => 'News一覧',
                     'add_new' => '新規追加',
@@ -74,6 +74,14 @@
             'rewrite'             => array( 'slug' => 'news' )
         );
         register_taxonomy( 'news_tax', 'news', $args );
+    }
+    add_filter('wp_title', 'custom_news_taxonomy_title', 10, 1);
+    function custom_news_taxonomy_title($title) {
+        if (is_tax('news_tax')) {
+            $term = get_queried_object();
+            $title = $term->name . ' ｜ NEWS';
+        }
+        return $title;
     }
     
     function add_page_to_admin_menu() {

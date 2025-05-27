@@ -61,9 +61,9 @@
             
             if ($parent_id) {
                 $parent_title = strtoupper(get_the_title($parent_id)); 
-                echo "<title>$page_title | $parent_title | SHIROYAMA</title>";
+                echo "<title>$page_title ｜ $parent_title ｜ SHIROYAMA</title>";
             } else {
-                echo "<title>$page_title | SHIROYAMA</title>";
+                echo "<title>$page_title ｜ SHIROYAMA</title>";
             }
         } else {
             echo '<title>' . wp_title('', false) . ' ｜ SHIROYAMA</title>';
