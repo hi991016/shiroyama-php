@@ -24,7 +24,6 @@
       font-family: $en-fonts;
       font-size: 1.5rem;
       font-weight: 400;
-      letter-spacing: 0.96px;
       text-transform: uppercase;
 
       a {
@@ -61,7 +60,6 @@
     &_pager {
       font-size: 1.6rem;
       font-weight: 500;
-      letter-spacing: -0.32px;
       line-height: 1.5;
 
       &.older {
@@ -78,7 +76,6 @@
         font-family: $en-fonts;
         font-size: 1.8rem;
         font-weight: 400;
-        letter-spacing: 1.08px;
         line-height: 1.5;
         position: relative;
 
@@ -90,7 +87,6 @@
           font-family: $main-fonts;
           font-size: 1.6rem;
           font-weight: 500;
-          letter-spacing: -0.32px;
           line-height: 1.5;
         }
 
@@ -118,7 +114,6 @@
         position: absolute;
         right: 0;
         font-size: 1.3rem;
-        letter-spacing: 0.78px;
 
         .btn-category {
           display: flex !important;
@@ -167,7 +162,6 @@
 
       &_pager {
         font-size: 1.2rem;
-        letter-spacing: -0.24px;
       }
 
       &_center {
@@ -175,11 +169,9 @@
 
         a {
           font-size: 1.4rem;
-          letter-spacing: 0.84px;
 
           &.--back {
             font-size: 1.2rem;
-            letter-spacing: -0.24px;
           }
         }
       }
@@ -192,7 +184,6 @@
       h2.title {
         font-size: 2.8rem;
         font-weight: 600;
-        letter-spacing: -0.56px;
         line-height: 1.55;
         text-align: justify;
         font-feature-settings: "palt" 1;
@@ -209,14 +200,12 @@
         font-family: $en-fonts;
         font-size: 1.8rem;
         font-weight: 400;
-        letter-spacing: 1.08px;
       }
 
       a.category {
         font-family: $en-fonts;
         font-size: 1.2rem;
         font-weight: 400;
-        letter-spacing: 0.72px;
         width: 107px;
         height: 28px;
         background-color: #f7eed9;
@@ -249,7 +238,6 @@
         margin-top: 60px;
         font-size: 1.6rem;
         font-weight: 500;
-        letter-spacing: -0.8px;
         line-height: 2;
         text-align: justify;
         font-feature-settings: "palt" 1;
@@ -281,7 +269,6 @@
         justify-content: center;
 
         font-size: 1.7rem;
-        letter-spacing: -0.34px;
         text-decoration: none;
 
         transition: all 0.2s ease-in-out;
@@ -311,7 +298,6 @@
         margin-top: 120px;
         font-size: 2.4rem;
         font-weight: 600;
-        letter-spacing: -0.48px;
         line-height: 1.88;
         padding-left: 35px;
         position: relative;
@@ -339,7 +325,6 @@
       &_heading {
         h2.title {
           font-size: 1.8rem;
-          letter-spacing: -0.36px;
 
           br {
             display: none;
@@ -353,12 +338,10 @@
 
         p.date {
           font-size: 1.4rem;
-          letter-spacing: 0.56px;
         }
 
         a.category {
           font-size: 1.1rem;
-          letter-spacing: 0.66px;
           width: 95px;
           height: 20px;
         }
@@ -371,14 +354,12 @@
         p {
           margin-top: 45px;
           font-size: 1.3rem;
-          letter-spacing: -0.26px;
           line-height: 1.81;
         }
 
         a.btn {
           margin-top: 80px;
           font-size: 1.5rem;
-          letter-spacing: -0.3px;
           width: 100%;
           height: 64px;
 
@@ -391,7 +372,6 @@
         h3 {
           margin-top: 80px;
           font-size: 1.8rem;
-          letter-spacing: -0.36px;
           line-height: 1.83;
           padding-left: 30px;
 

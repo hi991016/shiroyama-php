@@ -1,3 +1,241 @@
 /* -------------------------------------------------------------------------- */
 /*                                contact page                                */
 /* -------------------------------------------------------------------------- */
+
+.contactpage {
+  // ===== contact =====
+  .contact {
+    &_container {
+      margin-top: 340px;
+      margin-bottom: 150px;
+    }
+
+    &_form {
+      margin-top: 150px;
+    }
+
+    &_line {
+      display: grid;
+      grid-template-columns: 28.5% 1fr 1fr;
+      align-items: center;
+      position: relative;
+      margin-top: 30px;
+
+      &:first-child {
+        margin-top: initial;
+      }
+    }
+
+    &_label {
+      position: relative;
+      font-size: 1.6rem;
+      font-weight: 600;
+      line-height: 1.5;
+      padding-right: 20px;
+
+      &.req {
+        &:after {
+          content: "＊";
+          color: #cc0000;
+          margin-left: 20px;
+          font-family: $main-fonts;
+        }
+      }
+
+      &:before {
+        content: "";
+        display: inline-block;
+        width: 20px;
+        height: 3px;
+        background: $yellow-cl;
+        border-radius: 10px;
+        transform: translateY(-4px);
+        margin-right: 12px;
+      }
+    }
+
+    &_field {
+      width: 100%;
+      word-break: break-word;
+      position: relative;
+      grid-column: 2 / 4;
+
+      input,
+      select,
+      textarea {
+        position: relative;
+        width: 100%;
+        height: 80px;
+        outline: none;
+        border: none;
+        padding: 0 35px;
+        border-radius: 5px;
+        background: #efefef;
+        box-sizing: border-box;
+        -webkit-appearance: none;
+
+        font-family: $main-fonts;
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 1.5;
+        color: $black-cl;
+
+        ::placeholder {
+          opacity: 0.3;
+        }
+      }
+
+      select {
+        background: #efefef url(../images/arrow-down.webp) no-repeat 96.5% 50%;
+        background-size: 14px 7px;
+
+        &.select_date {
+          background-position-x: 89.5%;
+        }
+      }
+    }
+
+    &_group {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+
+      &.col3 {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    &_policy {
+      margin-top: 100px;
+      position: relative;
+      width: 100%;
+      height: 430px;
+      border: 1px solid rgba($color: #000000, $alpha: 0.1);
+      border-radius: 5px;
+
+      &_content {
+        padding: 50px 55px;
+        overflow-y: scroll;
+        height: calc(100% - 80px);
+
+        h3 {
+          font-size: 1.8rem;
+          font-weight: 600;
+          margin-bottom: 40px;
+        }
+
+        p {
+          font-size: 1.4rem;
+          font-weight: 500;
+          line-height: 1.5;
+          text-align: justify;
+          font-feature-settings: "palt" 1;
+        }
+
+        ul {
+          padding-left: 20px;
+        }
+      }
+
+      &_check {
+        height: 80px;
+        width: 100%;
+        border-top: 1px solid rgba($color: #000000, $alpha: 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+
+        p {
+          font-size: 1.6rem;
+          font-weight: 600;
+          line-height: 1.2;
+        }
+
+        input[type="checkbox"] {
+          border: 2px solid $black-cl;
+          border-radius: 3px;
+          cursor: pointer;
+          line-height: 0;
+          margin: 0;
+          outline: 0;
+          padding: 0 !important;
+          height: 20px;
+          width: 20px;
+          display: block;
+          vertical-align: text-top;
+          -webkit-appearance: none;
+          position: relative;
+
+          &.active {
+            &:before {
+              opacity: 1;
+            }
+          }
+
+          &:before {
+            content: "";
+            position: absolute;
+            right: 50%;
+            top: 50%;
+            width: 4px;
+            height: 8px;
+            border: solid $black-cl;
+            border-width: 0 1px 1px 0;
+            margin: -1px -1px 0 -1px;
+            transform: rotate(45deg) translate(-50%, -50%);
+            z-index: 2;
+            opacity: 0;
+          }
+        }
+      }
+    }
+
+    &_btn {
+      margin-top: 100px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+
+      button,
+      input {
+        width: 100%;
+        height: 70px;
+        background: transparent;
+        border: 2px solid $black-cl;
+        border-radius: 5px;
+        outline: none;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        box-sizing: border-box;
+        -webkit-appearance: none;
+
+        font-family: $main-fonts;
+        font-size: 1.7rem;
+        font-weight: 600;
+        color: $black-cl;
+
+        &:hover {
+          background: $yellow-cl;
+          border-color: $yellow-cl;
+          color: $white-cl;
+          opacity: 1;
+        }
+
+        &.is-submit {
+          color: $white-cl;
+          background: #ccc;
+          border-color: #ccc;
+          pointer-events: none;
+        }
+
+        &.active {
+          background: $yellow-cl;
+          border-color: $yellow-cl;
+          color: $white-cl;
+          pointer-events: auto;
+        }
+      }
+    }
+  }
+}

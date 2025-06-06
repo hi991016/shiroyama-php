@@ -40,7 +40,6 @@
             width: 100%;
             font-size: 4.6rem;
             font-weight: 600;
-            letter-spacing: -0.92px;
             line-height: 1.5;
             writing-mode: vertical-rl;
           }
@@ -79,7 +78,6 @@
         padding: 0 50px;
         font-size: 1.8rem;
         font-weight: 600;
-        letter-spacing: -0.72px;
         line-height: 2;
         text-align: justify;
         font-feature-settings: "palt" 1;
@@ -109,7 +107,6 @@
 
             h2 {
               font-size: 2.6rem;
-              letter-spacing: -0.52px;
             }
           }
 
@@ -135,7 +132,6 @@
         &_desc {
           padding: 0;
           font-size: 1.5rem;
-          letter-spacing: -0.225px;
           line-height: 1.93;
         }
       }
@@ -316,7 +312,6 @@
         td {
           font-size: 1.6rem;
           font-weight: 500;
-          letter-spacing: -0.32px;
           line-height: 1.53;
           text-align: justify;
           font-feature-settings: "palt" 1;
@@ -354,13 +349,8 @@
 
           td {
             font-size: 1.3rem;
-            letter-spacing: -0.26px;
             line-height: 1.65;
-              flex-wrap: nowrap;
-
-
-            p {
-            }
+            flex-wrap: nowrap;
           }
 
           .th {
@@ -386,7 +376,6 @@
         grid-column: 1/4;
         font-size: 1.6rem;
         font-weight: 500;
-        letter-spacing: -0.8px;
         line-height: 2;
         text-align: justify;
         font-feature-settings: "palt" 1;
@@ -399,7 +388,6 @@
 
         &_content {
           font-size: 1.3rem;
-          letter-spacing: -0.26px;
           line-height: 1.81;
         }
       }
@@ -462,11 +450,10 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        
+
         p {
           font-size: 2.8rem;
           font-weight: 600;
-          letter-spacing: -0.56px;
           line-height: 1.54;
           writing-mode: vertical-lr;
         }
@@ -489,7 +476,6 @@
       p {
         font-size: 1.6rem;
         font-weight: 500;
-        letter-spacing: -0.8px;
         line-height: 2;
         text-align: justify;
         font-feature-settings: "palt" 1;
@@ -567,7 +553,6 @@
         &_txt {
           p {
             font-size: 2rem;
-            letter-spacing: -0.4px;
           }
         }
       }
@@ -581,7 +566,6 @@
 
         p {
           font-size: 1.3rem;
-          letter-spacing: -0.26px;
           line-height: 1.81;
         }
       }

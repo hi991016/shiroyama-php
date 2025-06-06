@@ -35,7 +35,6 @@
         margin-top: 45px;
         font-size: 1.6rem;
         font-weight: 500;
-        letter-spacing: -0.8px;
         line-height: 2;
         font-feature-settings: "palt" 1;
       }
@@ -64,7 +63,6 @@
       p {
         font-size: 1.6rem;
         font-weight: 500;
-        letter-spacing: -0.64px;
         line-height: 2;
         text-align: justify;
         font-feature-settings: "palt" 1;
@@ -73,7 +71,6 @@
       p.notes {
         margin-top: 40px;
         font-size: 1.4rem;
-        letter-spacing: -0.56px;
         opacity: 0.7;
       }
     }
@@ -94,7 +91,6 @@
         &_address {
           margin-top: 20px;
           font-size: 1.3rem;
-          letter-spacing: -0.26px;
           line-height: 1.81;
         }
       }
@@ -116,14 +112,12 @@
         
         p {
           font-size: 1.3rem;
-          letter-spacing: -0.26px;
           line-height: 1.81;
         }
 
         p.notes {
           margin-top: 20px;
           font-size: 1.1rem;
-          letter-spacing: -0.33px;
         }
       }
     }

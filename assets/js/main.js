@@ -183,21 +183,21 @@ if (document.querySelector("[data-accordion-btn]")) {
 
 // ===== handle tabs change =====
 const initTabs = () => {
-  const tabs = document.querySelectorAll('[data-tabs-items]');
-  const contents = document.querySelectorAll('[data-tabs-content]');
+  const tabs = document.querySelectorAll("[data-tabs-items]");
+  const contents = document.querySelectorAll("[data-tabs-content]");
 
   tabs.forEach((tab, index) => {
-    tab.addEventListener('click', () => {
+    tab.addEventListener("click", () => {
       // remove all class items/content
-      tabs.forEach(t => t.classList.remove('--active'));
-      contents.forEach(c => c.classList.remove('--active'));
+      tabs.forEach((t) => t.classList.remove("--active"));
+      contents.forEach((c) => c.classList.remove("--active"));
 
       // add class item/click show/content
-      tab.classList.add('--active');
-      contents[index].classList.add('--active');
+      tab.classList.add("--active");
+      contents[index].classList.add("--active");
     });
   });
-}
+};
 initTabs();
 
 // ===== swiper components =====
@@ -223,35 +223,35 @@ const swiperComponents = new Swiper("[data-swiper-components]", {
 
 // ## init custom cursor
 const initCustomCursor = () => {
-  const cursorPrev = document.querySelector('.cursor-prev');
-  const cursorNext = document.querySelector('.cursor-next');
-  const swiper = document.querySelector('[data-swiper-components]');
+  const cursorPrev = document.querySelector(".cursor-prev");
+  const cursorNext = document.querySelector(".cursor-next");
+  const swiper = document.querySelector("[data-swiper-components]");
 
   if (!cursorPrev || !cursorNext || !swiper) return;
 
-  document.addEventListener('mousemove', (e) => {
+  document.addEventListener("mousemove", (e) => {
     cursorPrev.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
     cursorNext.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
 
     const target = e.target;
-    if (target.closest('.swiper-button-next')) {
-      cursorNext.classList.add('--active');
-      cursorPrev.classList.remove('--active');
-    } else if (target.closest('.swiper-button-prev')) {
-      cursorPrev.classList.add('--active');
-      cursorNext.classList.remove('--active');
+    if (target.closest(".swiper-button-next")) {
+      cursorNext.classList.add("--active");
+      cursorPrev.classList.remove("--active");
+    } else if (target.closest(".swiper-button-prev")) {
+      cursorPrev.classList.add("--active");
+      cursorNext.classList.remove("--active");
     } else {
-      cursorPrev.classList.remove('--active');
-      cursorNext.classList.remove('--active');
+      cursorPrev.classList.remove("--active");
+      cursorNext.classList.remove("--active");
     }
   });
 
   // Ẩn cursor khi chuột rời swiper
-  swiper.addEventListener('mouseleave', () => {
-    cursorPrev.classList.remove('--active');
-    cursorNext.classList.remove('--active');
+  swiper.addEventListener("mouseleave", () => {
+    cursorPrev.classList.remove("--active");
+    cursorNext.classList.remove("--active");
   });
-}
+};
 initCustomCursor();
 
 // ====== news page ======
@@ -270,7 +270,7 @@ if (document.querySelector("[data-news-category]")) {
 }
 
 // ====== education/daily swiper ======
-const mobileMediaQuery = window.matchMedia('(max-width: 1023px)');
+const mobileMediaQuery = window.matchMedia("(max-width: 1023px)");
 let swiperBasic = null;
 const initSwiperBasic = () => {
   if (mobileMediaQuery.matches && !swiperBasic) {
@@ -295,7 +295,32 @@ const initSwiperBasic = () => {
   }
 };
 initSwiperBasic();
-mobileMediaQuery.addEventListener('change', initSwiperBasic);
+mobileMediaQuery.addEventListener("change", initSwiperBasic);
+
+//  ===== contact =====
+const [btnCheckbox, btnClear, btnSubmit, formFields] = [
+  document.querySelector("[data-checkbox]"),
+  document.querySelector("[data-form-clear]"),
+  document.querySelector("[data-form-submit]"),
+  document.querySelectorAll(".contact_line input"),
+];
+
+// handle checkbox
+btnCheckbox?.addEventListener("change", function () {
+  const isCheck = this.checked;
+  if (isCheck) {
+    this.classList.add("active");
+    btnSubmit.classList.add("active");
+  } else {
+    this.classList.remove("active");
+    btnSubmit.classList.remove("active");
+  }
+});
+
+// handle clear
+btnClear?.addEventListener("click", function () {
+  formFields.forEach((element) => (element.value = ""));
+});
 
 // ### ===== DOMCONTENTLOADED ===== ###
 window.addEventListener("pageshow", () => {
