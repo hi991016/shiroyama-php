@@ -20,10 +20,10 @@
                             <!-- inquiry -->
                             <div class="contact_line">
                                 <div class="contact_label req">
-                                    <label for="inquiry">お問い合わせ種別</label>
+                                    <label for="your-subject">お問い合わせ種別</label>
                                 </div>
                                 <div class="contact_field">
-                                    <select id="inquiry" name="your-subject">
+                                    <select name="your-subject">
                                         <option value="" disabled="">選択してください</option>
                                         <option value="園見学のお申し込み">園見学のお申し込み</option>
                                         <option value="お問い合わせ">お問い合わせ</option>
@@ -54,16 +54,16 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- child date of birth -->
+                            <!-- birthday -->
                             <div class="contact_line">
                                 <div class="contact_label req">
-                                    <label for="date">お子様の生年月日</label>
+                                    <label for="birthday">お子様の生年月日</label>
                                 </div>
                                 <div class="contact_field">
                                     <div class="contact_group col3">
-                                        <input size="40" maxlength="400"  value="" type="text" placeholder="年" name="year">
-                                        <select class="select_date" name="month"><option value="" disabled="">月</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option></select>
-                                        <select class="select_date" name="day"><option value="" disabled="">日</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option></select>
+                                        <input size="40" maxlength="400"  value="" type="text" placeholder="年" name="yob">
+                                        <select class="select_date" name="dof"><option value="" disabled="">月</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option></select>
+                                        <select class="select_date" name="mof"><option value="" disabled="">日</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option></select>
                                     </div>
                                 </div>
                             </div>
@@ -217,7 +217,7 @@
                             <!-- submit -->
                             <div class="contact_btn">
                                 <button type="button" data-form-clear>クリア</button>
-                                <input class="is-submit is-disabled" type="submit" value="入力内容のご確認" data-form-submit />
+                                <input class="is-submit" type="submit" value="入力内容のご確認" data-form-submit />
                             </div>
                         </form>
                     </div>
