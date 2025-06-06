@@ -94,7 +94,7 @@
                                     <label for="phone">お電話番号</label>
                                 </div>
                                 <div class="contact_field">
-                                    <input size="40" maxlength="400"  value="" type="tel" name="phone">
+                                    <input size="40" maxlength="400"  value="" placeholder="日中繋がりやすいお電話番号をご記入ください" type="tel" name="phone">
                                 </div>
                             </div>
                             <!-- nursery -->
@@ -123,6 +123,9 @@
                             <div class="contact_policy">
                                 <div class="contact_policy_content">
                                     <h3>プライバシーポリシー</h3>
+                                    
+                                    <p>&nbsp;</p>
+                                    <p>&nbsp;</p>
 
                                     <p>学校法人石川キンダー学園では、本ホームページにおける個人情報の収集・利用・管理及び廃棄について、次のとおり個人情報保護方針を定め、収集した個人情報を取扱目的の範囲内で適切に取り扱います。</p>
                                     
