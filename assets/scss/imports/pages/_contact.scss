@@ -6,7 +6,7 @@
   // ===== contact =====
   .contact {
     &_container {
-      margin-top: 340px;
+      margin: 340px 0 50px;
 
       @include maxW(1023px) {
         margin-top: 95px;
@@ -29,6 +29,10 @@
       position: relative;
       margin-top: 30px;
 
+      &:first-child {
+        margin-top: initial;
+      }
+
       @include maxW(1023px) {
         display: block;
         margin-top: 25px;
@@ -46,7 +50,7 @@
         &:after {
           content: "＊";
           color: #cc0000;
-          margin-left: 20px;
+          margin-left: 5px;
           font-family: $main-fonts;
         }
       }
@@ -59,7 +63,7 @@
         background: $yellow-cl;
         border-radius: 10px;
         transform: translateY(-4px);
-        margin-right: 12px;
+        margin-right: 5px;
       }
 
       @include maxW(1023px) {
@@ -69,7 +73,7 @@
 
         &.req {
           &:after {
-            margin-left: 15px;
+            margin-left: 5px;
           }
         }
 
@@ -100,6 +104,7 @@
         font-weight: 500;
         line-height: 1.5;
         display: inline-block;
+        padding-right: 5px;
 
         &:last-child {
           padding-right: initial;
@@ -156,6 +161,7 @@
           height: 65px;
           padding: 0 20px;
           font-size: 1.3rem;
+          border-radius: 3px;
         }
 
         select {
@@ -275,6 +281,7 @@
       @include maxW(1023px) {
         margin-top: 80px;
         height: 370px;
+        border-radius: 3px;
 
         &_content {
           padding: 25px;
@@ -337,6 +344,7 @@
         font-size: 1.7rem;
         font-weight: 600;
         color: $black-cl;
+        padding-bottom: 5px;
 
         &:hover {
           background: $yellow-cl;

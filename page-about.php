@@ -13,7 +13,7 @@
             </picture>
             <div class="c-thumbnail_heading">
                 <h2>城山幼稚園について</h2>
-                <p>DABOUT US</p>
+                <p>ABOUT US</p>
             </div>
         </section>
         <!-- //thumbnail -->
@@ -53,7 +53,7 @@
                         <div class="title" data-fadein>
                             <h2>
                                 いちばんの<br />
-                                今日を、ここで。
+                                今日を<span>、</span>ここで<span>。</span>
                             </h2>
                         </div>
                         <div class="thumb" data-fadein>
@@ -150,7 +150,7 @@
                                         テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります（120字程度）
                                     </p>
                                     <a href="<?= home_url(); ?>/teacher/" class="c-btn">
-                                        <p>先生のこと</p>
+                                        <p>職員のこと</p>
                                         <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="27.414"
                                             height="12.828" viewBox="0 0 27.414 12.828">
                                             <g id="Group_61" data-name="Group 61" transform="translate(-1332 -606.586)">
@@ -428,7 +428,7 @@
                         </div>
                         <div class="c-recruit_right">
                             <div class="c-recruit_title c-textcircle">
-                                <p>学校法人 石川キンダー学園について</p>
+                                <p>学校法人石川キンダー学園について</p>
                             </div>
                             <div class="sp-only">
                                 <figure>

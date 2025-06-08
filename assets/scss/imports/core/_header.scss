@@ -20,7 +20,7 @@
 
   &_list {
     position: absolute;
-    top: 60px;
+    top: 55px;
     right: 170px;
     display: flex;
     align-items: flex-start;
@@ -29,6 +29,7 @@
 
     a {
       font-size: 1.7rem;
+      letter-spacing: 0.5px;
       font-weight: 600;
       writing-mode: vertical-lr;
       position: relative;
@@ -53,7 +54,7 @@
 
   &_hamburger {
     position: absolute;
-    top: 60px;
+    top: 55px;
     right: 50px;
 
     button {
@@ -79,14 +80,15 @@
         height: 2px;
         border-radius: 20px;
         background-color: var(--color);
-        margin: 5px 0;
+        margin: 3px 0;
         transition: 0.3s ease-in;
       }
     }
 
     p {
       font-size: 1.2rem;
-      margin-top: 8px;
+      margin-top: 5px;
+      letter-spacing: 1px;
       text-align: center;
       text-transform: uppercase;
     }
@@ -137,13 +139,18 @@
         width: 40px;
 
         span {
-          margin: 3px 0;
+          margin: 2px 0;
         }
       }
 
       p {
         font-size: 1rem;
-        margin-top: 4px;
+        margin-top: 5px;
+        letter-spacing: 0.5px;
+      }
+
+      &.c-menu_close p {
+        margin-top: -5px;
       }
     }
   }
@@ -185,7 +192,7 @@
   }
 
   &_top {
-    padding: 40px 50px 0 40px;
+    padding: 35px 50px 0 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -219,7 +226,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 50px;
+    gap: 70px;
+    margin-bottom: 40px;
 
     .left {
       a {
@@ -230,7 +238,7 @@
         svg {
           position: absolute;
           top: 50%;
-          left: -35px;
+          left: -40px;
           transform: translateY(-50%);
           opacity: 0;
           transition: opacity 0.3s ease-in-out;
@@ -286,8 +294,9 @@
 
     p {
       font-family: $en-fonts;
-      font-size: 1rem;
-      font-weight: 500;
+      font-size: 1.1rem;
+      letter-spacing: 1px;
+      font-weight: 600;
     }
   }
 
@@ -297,12 +306,14 @@
     }
 
     &_top {
-      padding: 13px 25px 0 20px;
+      padding: 18px 25px 0 20px;
     }
 
     &_close {
       button {
-        height: 40px;
+        height: 50px;
+        width: 30px;
+        margin: -12px auto 0;
       }
     }
 
@@ -344,6 +355,10 @@
       padding: 0 22px 20px;
       align-items: flex-end;
       flex-direction: row-reverse;
+
+      p {
+        font-size: 1rem;
+      }
     }
   }
 }

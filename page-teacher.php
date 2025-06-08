@@ -12,7 +12,7 @@
                     width="1300" height="550">
             </picture>
             <div class="c-thumbnail_heading">
-                <h2>先生のこと</h2>
+                <h2>職員のこと</h2>
                 <p>TEACHER</p>
             </div>
         </section>

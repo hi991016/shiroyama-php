@@ -277,10 +277,6 @@
     }, 10, 2);
 
     // ========= CF7 ========= 
-    // change data attribute form en-us to ja
-    add_filter('wpcf7_form_language', function($lang) {
-        return 'ja';
-    });
     // remove <p>, <br>
     add_filter('wpcf7_autop_or_not', '__return_false');
 

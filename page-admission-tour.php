@@ -56,7 +56,7 @@
                                         <p class="desc">
                                             テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります（120字程度）
                                         </p>
-                                        <a href="<?= home_url(); ?>/news/info/" class="c-btn">
+                                        <a href="<?= home_url(); ?>/news/admission" class="c-btn">
                                             <p>開催日程はこちら</p>
                                             <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="27.414"
                                                 height="12.828" viewBox="0 0 27.414 12.828">
@@ -190,7 +190,7 @@
                 <div class="admission_recruit">
                     <div class="admission_recruit_wrapper u-wrapper">
                         <div class="admission_recruit_title c-textcircle" data-fadein>
-                            <p>入園までの流れ</p>
+                            <p>見学お申し込み</p>
                         </div>
                         <div class="admission_recruit_desc" data-fadein>
                             <p>

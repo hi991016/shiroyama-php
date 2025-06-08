@@ -7,6 +7,12 @@
   .education {
     &_container {
       margin-top: 115px;
+
+      h2 {
+        font-size: 2.8rem;
+        font-weight: 600;
+        line-height: 1.45;
+      }
     }
 
     &_fv {
@@ -66,6 +72,10 @@
     @include maxW(1023px) {
       &_container {
         margin-top: 75px;
+
+        h2 {
+          font-size: 2rem;
+        }
       }
 
       &_fv {
@@ -103,7 +113,7 @@
     &_tabs {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      margin-top: 150px;
+      margin: 150px 0;
 
       &_list {
         position: sticky;
@@ -212,7 +222,7 @@
   // ====== advanced =====
   .advanced {
     &_items {
-      margin-top: 150px;
+      margin: 150px 0;
     }
 
     &_swiper {
@@ -236,7 +246,7 @@
 
     @include maxW(1023px) {
       &_items {
-        margin-top: 70px;
+        margin: 80px 0;
       }
 
       &_swiper {

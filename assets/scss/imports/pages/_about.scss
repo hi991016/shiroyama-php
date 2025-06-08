@@ -39,9 +39,16 @@
           h2 {
             width: 100%;
             font-size: 4.6rem;
+            letter-spacing: 2px;
             font-weight: 600;
-            line-height: 1.5;
+            line-height: 1.4;
             writing-mode: vertical-rl;
+
+            span {
+              display: inline-block;
+              height: 25px;
+              margin-top: 3px;
+            }
           }
         }
 
@@ -107,6 +114,11 @@
 
             h2 {
               font-size: 2.6rem;
+
+              span {
+                height: 16px;
+                margin-top: 2px;
+              }
             }
           }
 
@@ -140,6 +152,10 @@
     &_feature {
       padding-top: 150px;
 
+      .c-textcircle p {
+        margin-bottom: -60px;
+      }
+
       &_group {
         margin-top: 150px;
         display: grid;
@@ -162,6 +178,10 @@
 
       @include maxW(1023px) {
         padding-top: 100px;
+
+        .c-textcircle p {
+          margin-bottom: -35px;
+        }
 
         &_group {
           margin-top: 80px;
@@ -218,7 +238,7 @@
               bottom: 0;
               right: 0;
               width: calc(100% - 35px);
-              height: 2px;
+              height: 3px;
               background-color: $black-cl;
             }
           }
@@ -248,6 +268,7 @@
             &.--active {
               &:after {
                 width: calc(100% - 30px);
+                height: 2px;
               }
             }
           }
@@ -299,8 +320,8 @@
 
         tr {
           display: grid;
-          grid-template-columns: 1fr 65.294%;
-          gap: 25px;
+          grid-template-columns: 1fr 68%;
+          gap: 20px;
           border-top: 1px solid rgba($color: #000000, $alpha: 0.1);
           padding: 35px 0;
 
@@ -357,7 +378,7 @@
             gap: 7px;
 
             span {
-              width: 15px;
+              width: 7px;
               height: 2px;
               border-radius: 0;
             }
@@ -367,11 +388,6 @@
     }
 
     &_history {
-      &_inner {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-      }
-
       &_content {
         grid-column: 1/4;
         font-size: 1.6rem;
@@ -483,7 +499,7 @@
     }
 
     &_trees {
-      margin-top: 100px;
+      margin-top: 80px;
 
       picture {
         padding-bottom: calc(733 / 900 * 100%);
@@ -571,7 +587,7 @@
       }
 
       &_trees {
-        margin-top: 80px;
+        margin-top: 40px;
 
         picture {
           padding-bottom: calc(301 / 370 * 100%);
@@ -587,7 +603,7 @@
 
         &_right {
           .--sign {
-            margin-top: 105px;
+            margin-top: 40px;
           }
         }
 

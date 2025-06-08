@@ -324,13 +324,13 @@
                     <svg width="30" height="28.604">
                         <use xlink:href="#leaf-icon" />
                     </svg>
-                    <p>先生のこと</p>
+                    <p>職員のこと</p>
                 </a>
                 <a href="<?= home_url(); ?>/support/">
                     <svg width="30" height="28.604">
                         <use xlink:href="#leaf-icon" />
                     </svg>
-                    <p>子育てサポト</p>
+                    <p>子育てサポート</p>
                 </a>
                 <a href="<?= home_url(); ?>/admission/">
                     <svg width="30" height="28.604">
@@ -411,7 +411,7 @@
                             <svg width="28" height="26.7">
                                 <use xlink:href="#leaf-icon" />
                             </svg>
-                            <p>先生のこと</p>
+                            <p>職員のこと</p>
                         </a>
                         <a href="<?= home_url(); ?>/support/">
                             <svg width="28" height="26.7">

@@ -38,7 +38,7 @@
         }
 
         h3 {
-          margin-top: 15px;
+          margin-top: 20px;
           font-size: 2rem;
           font-weight: 600;
           line-height: 1.45;
@@ -47,7 +47,7 @@
         }
 
         p {
-          margin-top: 25px;
+          margin-top: 20px;
           font-size: 1.5rem;
           font-weight: 500;
           line-height: 1.87;
@@ -87,7 +87,7 @@
     &_tabs {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      margin-top: 195px;
+      margin: 150px 0;
 
       &_list {
         ul {
@@ -119,6 +119,10 @@
         display: none;
         visibility: hidden;
 
+        &.daily_event .daily_event_list {
+          margin-top: 12px;
+        }
+
         &.--active {
           display: block;
           visibility: visible;
@@ -126,7 +130,7 @@
       }
 
       @include maxW(1023px) {
-        margin-top: 115px;
+        margin: 115px 0 80px;
         display: block;
 
         &_list {
@@ -173,7 +177,7 @@
       &_month {
         display: flex;
         align-items: center;
-        gap: 12px;
+        gap: 5px;
         margin-bottom: 25px;
 
         span {
@@ -192,7 +196,7 @@
 
       &_content {
         h4 {
-          margin-top: 10px;
+          margin-top: 20px;
           font-size: 1.6rem;
           font-weight: 500;
           line-height: 1.56;
@@ -373,7 +377,7 @@
         }
 
         figure {
-          margin-top: 15px;
+          margin-top: 25px;
           margin-bottom: 30px;
           display: block;
           position: relative;

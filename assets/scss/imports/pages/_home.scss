@@ -39,6 +39,7 @@
 
       h2 {
         font-size: 5.2rem;
+        letter-spacing: 2px;
         font-weight: 600;
         line-height: 1.28;
         font-feature-settings: "palt" 1;
@@ -53,13 +54,21 @@
 
       &_heading {
         top: 25px;
-        right: 33px;
+        right: 26px;
         bottom: auto;
         left: auto;
 
         h2 {
           font-size: 3.2rem;
+          letter-spacing: 1px;
           writing-mode: vertical-rl;
+          font-feature-settings: normal;
+
+          span {
+            display: inline-block;
+            height: 17px;
+            margin-top: 2px;
+          }
         }
       }
     }
@@ -116,6 +125,8 @@
       &_link {
         gap: 9px;
         font-size: 1.4rem;
+        margin-top: 2px;
+
         svg {
           width: 15px;
           height: auto;
@@ -123,7 +134,7 @@
       }
 
       &_right {
-        margin-top: 35px;
+        margin-top: 40px;
 
         .c-news_items {
           gap: 20px;
@@ -193,6 +204,7 @@
       &_swiper {
         picture {
           padding-bottom: calc(493 / 370 * 100%);
+          border-radius: 3px;
         }
       }
     }
@@ -246,38 +258,53 @@
 
     &_heading {
       position: absolute;
-      top: 45px;
-      right: 60px;
+      top: 50px;
+      right: 50px;
       z-index: 3;
 
       h2 {
         font-size: 4.6rem;
+        letter-spacing: 2px;
         font-weight: 600;
-        line-height: 1.5;
+        line-height: 1.4;
         writing-mode: vertical-rl;
         color: $white-cl;
         width: 100%;
+
+        span {
+          display: inline-block;
+          height: 25px;
+          margin-top: 3px;
+        }
       }
 
       @include maxW(1023px) {
-        top: 20px;
-        right: 30px;
+        top: 25px;
+        right: 24px;
 
         h2 {
           font-size: 2.6rem;
+          letter-spacing: 1px;
+          line-height: 1.3;
+
+          span {
+            height: 16px;
+            margin-top: 2px;
+          }
         }
       }
     }
 
     &_content {
       position: absolute;
-      bottom: 52px;
+      bottom: 45px;
       width: 100%;
       z-index: 3;
       padding: 0 60px;
 
       p {
         font-size: 2rem;
+        letter-spacing: 1px;
         font-weight: 600;
         line-height: 2;
         color: $white-cl;
@@ -286,7 +313,7 @@
       }
 
       @include maxW(1023px) {
-        margin-top: 57px;
+        margin-top: 45px;
         position: initial;
         padding: 0;
 
@@ -307,7 +334,7 @@
       }
 
       @include maxW(1023px) {
-        margin-top: 58px;
+        margin-top: 45px;
         height: 64px;
         font-size: 1.5rem;
 
@@ -394,9 +421,9 @@
 
     &_top {
       position: absolute;
-      top: 37px;
+      top: 38px;
       width: 100%;
-      padding: 0 50px 0 42px;
+      padding: 0 50px 0 45px;
       z-index: 2;
       display: flex;
       justify-content: space-between;
@@ -412,14 +439,17 @@
         font-size: 2.8rem;
         font-weight: 600;
         line-height: 1.3;
+        font-feature-settings: "palt" 1;
+        letter-spacing: 1px;
       }
 
       p {
         margin-top: 10px;
-        margin-left: 4px;
+        margin-left: 0;
         font-family: $en-fonts;
         font-size: 1.4rem;
-        font-weight: 500;
+        font-weight: 600;
+        letter-spacing: 1px;
         line-height: 1.5;
         opacity: 0.7;
       }
@@ -427,7 +457,7 @@
 
     &_desc {
       position: absolute;
-      bottom: 33px;
+      bottom: 30px;
       width: 100%;
       padding: 0 42px;
       z-index: 2;
@@ -443,7 +473,7 @@
 
     @include maxW(1023px) {
       &_container {
-        margin-top: 80px;
+        margin-top: 100px;
         padding-left: 0;
       }
 
@@ -498,6 +528,11 @@
         }
       }
     }
+  }
+
+  .swiper-slide:nth-child(1) .feature_heading h2,
+  .swiper-slide:nth-child(4) .feature_heading h2 {
+    margin-left: -2px;
   }
 
   // ===== admission =====
@@ -575,7 +610,7 @@
 
     @include maxW(1023px) {
       &_container {
-        margin-top: 80px;
+        margin-top: 100px;
       }
 
       &_list {
@@ -597,6 +632,7 @@
         picture {
           padding-bottom: 100%;
           aspect-ratio: 1/1;
+          border-radius: 3px;
         }
 
         p {
@@ -627,7 +663,8 @@
     &_heading {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
+      margin-left: 2px;
 
       span {
         display: block;
@@ -651,7 +688,7 @@
     }
 
     &_desc {
-      margin-top: 52px;
+      margin-top: 40px;
 
       p {
         font-size: 1.6rem;
@@ -663,7 +700,7 @@
     }
 
     &_btn {
-      margin-top: 85px;
+      margin-top: 50px;
 
       &:hover {
         svg {
@@ -734,7 +771,7 @@
       }
 
       &_desc {
-        margin-top: 40px;
+        margin-top: 30px;
 
         p {
           font-size: 1.3rem;
@@ -743,7 +780,7 @@
       }
 
       &_btn {
-        margin-top: 57px;
+        margin-top: 35px;
 
         svg {
           width: 14.38px;
@@ -752,8 +789,9 @@
 
       &_right {
         picture {
-          margin-top: 40px;
+          margin-top: 30px;
           padding-bottom: calc(246 / 370 * 100%);
+          border-radius: 3px;
         }
       }
     }

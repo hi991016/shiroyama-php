@@ -96,10 +96,10 @@
                                     </div>
                                     <div class="daily_timeline_content">
                                         <div class="daily_timeline_group">
-                                            <h4 class="title">早朝お預かり保育<span>（有料/希望者のみ）</span></h4>
+                                            <h4 class="title">早朝お預かり保育 <span>（有料/希望者のみ）</span></h4>
                                             <div class="desc">
                                                 <p>通常の保育前、7:30からお預かりが可能です。</p>
-                                                <a href="/support/">
+                                                <a href="<?= home_url(); ?>/support/">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                         viewBox="0 0 16 16">
                                                         <g id="Group_58" data-name="Group 58"
@@ -149,7 +149,7 @@
                                     </div>
                                     <div class="daily_timeline_content">
                                         <div class="daily_timeline_group">
-                                            <h4 class="title">お支度＆自由遊び</h4>
+                                            <h4 class="title">お支度 ＆ 自由遊び</h4>
                                             <figure>
                                                 <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/daily/" alt="お支度＆自由遊び"
                                                     draggable="false" width="665" height="444">
@@ -174,7 +174,7 @@
                                     </div>
                                     <div class="daily_timeline_content">
                                         <div class="daily_timeline_group">
-                                            <h4 class="title">ラジオ体操＆朝かけっこ</h4>
+                                            <h4 class="title">ラジオ体操 ＆ 朝かけっこ</h4>
                                             <figure>
                                                 <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/daily/" alt="ラジオ体操＆朝かけっこ"
                                                     draggable="false" width="665" height="444">
@@ -208,7 +208,7 @@
                                                 <p>
                                                     「読み・書き・計算・体操・かけっこ・音楽」を毎日10分〜20分ずつ行います。幼児期に毎日継続して行うことにより、「自ら学び、自ら考え、自ら行動する力」の基礎を固めていきます。
                                                 </p>
-                                                <a href="/education/">
+                                                <a href="<?= home_url(); ?>/education/">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                         viewBox="0 0 16 16">
                                                         <g id="Group_58" data-name="Group 58"
@@ -249,7 +249,7 @@
                                                 <p>
                                                     食べる前に、作ってくれて人や食べ物に対する感謝の気持ちを込めて「いただきますの言葉」を心を揃えて唱和します。当日の朝に給食を注文することも可能です。城山幼稚園では、毎週木曜日に全員給食を取り入れています。
                                                 </p>
-                                                <a href="/support/">
+                                                <a href="<?= home_url(); ?>/support/">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                         viewBox="0 0 16 16">
                                                         <g id="Group_58" data-name="Group 58"
@@ -306,7 +306,7 @@
                                     </div>
                                     <div class="daily_timeline_content">
                                         <div class="daily_timeline_group">
-                                            <h4 class="title">降園<span>（14:30まで/14:40閉門）</span></h4>
+                                            <h4 class="title">降園 <span>（14:30まで/14:40閉門）</span></h4>
                                             <div class="desc">
                                                 <p>
                                                     担任が、保護者の方にその日の出来事をお伝えしています。お子さまについての不安や心配なこと等は、その日のうちに担任と相談することができます。（水曜日のみ13:00〜13:30降園/13:40閉門）
@@ -314,12 +314,12 @@
                                             </div>
                                         </div>
                                         <div class="daily_timeline_group">
-                                            <h4 class="title">放課後お預かり保育<span>（有料/希望者のみ）</span></h4>
+                                            <h4 class="title">放課後お預かり保育 <span>（有料/希望者のみ）</span></h4>
                                             <div class="desc">
                                                 <p>
                                                     通常の保育後、19:00までお預かりが可能です。お申込みはネットから24時間可能です。（当日のお昼12時まで）ただし、行事等でお預かりを行っていない日もあります。掲示板、お手紙等で事前にお知らせしますのでご確認ください。（水曜日のみ13:00～19:00）
                                                 </p>
-                                                <a href="/support/">
+                                                <a href="<?= home_url(); ?>/support/">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                         viewBox="0 0 16 16">
                                                         <g id="Group_58" data-name="Group 58"
@@ -340,13 +340,13 @@
                                             </div>
                                         </div>
                                         <div class="daily_timeline_group">
-                                            <h4 class="title">課外教室<span>（有料/希望者のみ）</span></h4>
+                                            <h4 class="title">課外教室 <span>（有料/希望者のみ）</span></h4>
                                             <div class="desc">
                                                 <p>
                                                     魅力的な課外教室がたくさんあるので、どれにしようか悩んでしまうかも（笑）<br class="pc-only" />
                                                     お預かり保育と組み合わせてのご利用も可能です。
                                                 </p>
-                                                <a href="/support/after-school-activities/">
+                                                <a href="<?= home_url(); ?>/support/after-school-activities/">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                         viewBox="0 0 16 16">
                                                         <g id="Group_58" data-name="Group 58"

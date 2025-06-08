@@ -154,107 +154,108 @@
                                 </div>
                             </div>
                         </div>
+                        
+	                    <div class="about_tabs" data-fadein>
+	                        <ul class="about_tabs_list" data-tabs>
+	                            <li class="--active" data-tabs-items>
+	                                <div class="c-textcircle">
+	                                    <p>基本情報</p>
+	                                </div>
+	                            </li>
+	                            <li data-tabs-items>
+	                                <div class="c-textcircle">
+	                                    <p>沿革</p>
+	                                </div>
+	                            </li>
+	                        </ul>
+	                        <div class="about_tabs_content about_info --active" data-tabs-content>
+	                            <div class="about_info_inner --only">
+	                                <div class="about_table">
+	                                    <table>
+	                                        <tbody>
+	                                            <tr>
+	                                                <td>
+	                                                    <div class="th">
+	                                                        <span></span>
+	                                                        <p>名称</p>
+	                                                    </div>
+	                                                </td>
+	                                                <td>
+	                                                    <p>学校法人 石川キンダー学園</p>
+	                                                </td>
+	                                            </tr>
+	                                            <tr>
+	                                                <td>
+	                                                    <div class="th">
+	                                                        <span></span>
+	                                                        <p>所在地</p>
+	                                                    </div>
+	                                                </td>
+	                                                <td>
+	                                                    <p>〒174-0043 東京都板橋区坂下2-22-10</p>
+	                                                </td>
+	                                            </tr>
+	                                            <tr>
+	                                                <td>
+	                                                    <div class="th">
+	                                                        <span></span>
+	                                                        <p>TEL / FAX</p>
+	                                                    </div>
+	                                                </td>
+	                                                <td>
+	                                                    <p style="display: inline-flex; gap: 5px;">03 0000 0000 / 03 0000 0000</p>
+	                                                </td>
+	                                            </tr>
+	                                            <tr>
+	                                                <td>
+	                                                    <div class="th">
+	                                                        <span></span>
+	                                                        <p>代表</p>
+	                                                    </div>
+	                                                </td>
+	                                                <td>
+	                                                    <p>○○○○</p>
+	                                                </td>
+	                                            </tr>
+	                                            <tr>
+	                                                <td>
+	                                                    <div class="th">
+	                                                        <span></span>
+	                                                        <p>設立</p>
+	                                                    </div>
+	                                                </td>
+	                                                <td>
+	                                                    <p>○○○○</p>
+	                                                </td>
+	                                            </tr>
+	                                            <tr>
+	                                                <td>
+	                                                    <div class="th">
+	                                                        <span></span>
+	                                                        <p>従業員数</p>
+	                                                    </div>
+	                                                </td>
+	                                                <td>
+	                                                    <p>○○名（2025年9月現在）</p>
+	                                                </td>
+	                                            </tr>
+	                                        </tbody>
+	                                    </table>
+	                                </div>
+	                            </div>
+	                        </div>
+	                        <div class="about_tabs_content about_history" data-tabs-content>
+	                            <div class="about_history_inner">
+	                                <div class="about_history_content">
+	                                    <p>
+	                                        テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります
+	                                    </p>
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
                     </div>
 
-                    <div class="about_tabs" data-fadein>
-                        <ul class="about_tabs_list" data-tabs>
-                            <li class="--active" data-tabs-items>
-                                <div class="c-textcircle">
-                                    <p>基本情報</p>
-                                </div>
-                            </li>
-                            <li data-tabs-items>
-                                <div class="c-textcircle">
-                                    <p>沿革</p>
-                                </div>
-                            </li>
-                        </ul>
-                        <div class="about_tabs_content about_info --active" data-tabs-content>
-                            <div class="about_info_inner --only">
-                                <div class="about_table">
-                                    <table>
-                                        <tbody>
-                                            <tr>
-                                                <td>
-                                                    <div class="th">
-                                                        <span></span>
-                                                        <p>名称</p>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <p>学校法人 石川キンダー学園</p>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="th">
-                                                        <span></span>
-                                                        <p>所在地</p>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <p>〒174-0043 東京都板橋区坂下2-22-10</p>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="th">
-                                                        <span></span>
-                                                        <p>TEL / FAX</p>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <p style="display: inline-flex; gap: 5px;">03 0000 0000 / 03 0000 0000</p>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="th">
-                                                        <span></span>
-                                                        <p>代表</p>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <p>○○○○</p>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="th">
-                                                        <span></span>
-                                                        <p>設立</p>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <p>○○○○</p>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="th">
-                                                        <span></span>
-                                                        <p>従業員数</p>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <p>○○名（2025年9月現在）</p>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="about_tabs_content about_history" data-tabs-content>
-                            <div class="about_history_inner">
-                                <div class="about_history_content">
-                                    <p>
-                                        テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
 
                 <div class="c-recruit --reverse" data-fadein>

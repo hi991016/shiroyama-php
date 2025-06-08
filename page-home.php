@@ -31,7 +31,7 @@
                 <div class="fv_heading">
                     <h2>
                         いちばんの <br />
-                        今日を、ここで。
+                        今日を<span>、</span>ここで<span>。</span>
                     </h2>
                 </div>
                 <div class="c-scrolldown"><span></span></div>
@@ -191,7 +191,7 @@
                             <div class="phy_heading">
                                 <h2>
                                     いちばんの<br />
-                                    今日を、ここで。
+                                    今日を<span>、</span>ここで<span>。</span>
                                 </h2>
                             </div>
                             <div class="phy_content pc-only">

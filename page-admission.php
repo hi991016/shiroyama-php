@@ -58,8 +58,7 @@
                             <div class="c-feature_inner">
                                 <div class="c-feature_left">
                                     <h3 class="is-pad-sp">
-                                        保育見学会、未就園児イベントのほか、<br />
-                                        個別の見学も受け付けています。
+                                        保育見学会、未就園児イベントのほか、<br class="sp-only">個別の見学も受け付けています。
                                     </h3>
                                     <div class="is-padl-sp">
                                         <figure class="c-feature_figure sp-only">
@@ -107,7 +106,7 @@
                             <div class="c-feature_inner">
                                 <div class="c-feature_left">
                                     <h3 class="is-pad-sp">
-                                        放課後保育や課外教室などの <br />
+                                        放課後保育や課外教室などの<br />
                                         子育てサポートが充実しています。
                                     </h3>
                                     <div class="is-padl-sp">
@@ -156,7 +155,7 @@
                             <div class="c-feature_inner">
                                 <div class="c-feature_left">
                                     <h3 class="is-pad-sp">
-                                        板橋区の「私立幼稚園保護者補助金」など、各種補助金を利用できます。
+                                        板橋区の「私立幼稚園保護者補助金」など、<br class="sp-only">各種補助金を利用できます。
                                     </h3>
                                     <div class="is-padl-sp">
                                         <figure class="c-feature_figure sp-only">
@@ -258,7 +257,7 @@
                 <div class="admission_recruit">
                     <div class="admission_recruit_wrapper u-wrapper">
                         <div class="admission_recruit_title c-textcircle" data-fadein>
-                            <p>入園までの流れ</p>
+                            <p>見学お申し込み</p>
                         </div>
                         <div class="admission_recruit_desc" data-fadein>
                             <p>
