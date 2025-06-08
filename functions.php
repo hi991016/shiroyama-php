@@ -275,3 +275,39 @@
             echo get_post_meta($post_id, '_is_pinned', true) ? '📌 Yes' : 'No';
         }
     }, 10, 2);
+
+    // ========= CF7 ========= 
+    // change data attribute form en-us to ja
+    add_filter('wpcf7_form_language', function($lang) {
+        return 'ja';
+    });
+    // remove <p>, <br>
+    add_filter('wpcf7_autop_or_not', '__return_false');
+
+    // only sent when fills is entered
+    add_action('wpcf7_before_send_mail', 'custom_wpcf7_validate', 10, 3);
+    function custom_wpcf7_validate($contact_form, &$abort, $submission) {
+        // enable debug log
+        if (!defined('WP_DEBUG') || !WP_DEBUG) {
+            define('WP_DEBUG', true);
+            define('WP_DEBUG_LOG', true);
+            define('WP_DEBUG_DISPLAY', false);
+        }
+
+        // Get data from form
+        $posted_data = $submission->get_posted_data();
+
+        // Log outgoing data
+        error_log('CF7 Submission Debug: ' . print_r($posted_data, true));
+
+        // ist of required fields
+        $required_fields = ['your-subject', 'your-name', 'your-email'];
+        foreach ($required_fields as $field) {
+            if (empty($posted_data[$field])) {
+                $abort = true; // Cancel sending email
+                $submission->set_response('Please fill in all required fields.');
+                error_log('CF7 Error: Required field ' . $field . ' blank.');
+                return;
+            }
+        }
+    }

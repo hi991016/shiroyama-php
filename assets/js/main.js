@@ -301,8 +301,8 @@ mobileMediaQuery.addEventListener("change", initSwiperBasic);
 const [btnCheckbox, btnClear, btnSubmit, formFields] = [
   document.querySelector("[data-checkbox]"),
   document.querySelector("[data-form-clear]"),
-  document.querySelector("[data-form-submit]"),
-  document.querySelectorAll(".contact_line input"),
+  document.querySelector(".is-submit"),
+  document.querySelectorAll(".contact_line input, .contact_line textarea"),
 ];
 
 // handle checkbox
@@ -321,6 +321,8 @@ btnCheckbox?.addEventListener("change", function () {
 btnClear?.addEventListener("click", function () {
   formFields.forEach((element) => (element.value = ""));
 });
+
+//
 
 // ### ===== DOMCONTENTLOADED ===== ###
 window.addEventListener("pageshow", () => {
