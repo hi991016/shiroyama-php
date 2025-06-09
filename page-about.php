@@ -48,31 +48,53 @@
         <!-- about// -->
         <section class="about" data-offset-top>
             <div class="about_container">
-                <div class="about_fv">
+                <div class="about_fv" data-fadein>
                     <div class="about_fv_main">
-                        <div class="title" data-fadein>
+                        <div class="title">
                             <h2>
                                 いちばんの<br />
                                 今日を<span>、</span>ここで<span>。</span>
                             </h2>
                         </div>
-                        <div class="thumb" data-fadein>
-                            <picture>
-                                <source media="(max-width: 1023px)" data-srcset="<?= get_template_directory_uri() ?>/assets/images/about/">
-                                <img class="lazy" draggable="false" data-src="<?= get_template_directory_uri() ?>/assets/images/about/" alt="いちばんの今日を、ここで。"
-                                    width="893" height="596">
-                            </picture>
+                        <div class="thumb" data-about-swiper>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <picture>
+                                        <source media="(max-width: 1023px)" data-srcset="<?= get_template_directory_uri() ?>/assets/images/about/about_feature_01.webp">
+                                        <img class="lazy" draggable="false" data-src="<?= get_template_directory_uri() ?>/assets/images/about/about_feature_01.webp" alt="いちばんの今日を、ここで。"
+                                            width="893" height="596">
+                                    </picture>
+                                </div>
+                                <div class="swiper-slide">
+                                    <picture>
+                                        <source media="(max-width: 1023px)" data-srcset="<?= get_template_directory_uri() ?>/assets/images/about/about_feature_02.webp">
+                                        <img class="lazy" draggable="false" data-src="<?= get_template_directory_uri() ?>/assets/images/about/about_feature_02.webp" alt="いちばんの今日を、ここで。"
+                                            width="893" height="596">
+                                    </picture>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="about_fv_sub">
-                        <div class="thumb" data-fadein>
-                            <picture>
-                                <source media="(max-width: 1023px)" data-srcset="<?= get_template_directory_uri() ?>/assets/images/about/">
-                                <img class="lazy" draggable="false" data-src="<?= get_template_directory_uri() ?>/assets/images/about/" alt="いちばんの今日を、ここで。"
-                                    width="550" height="367">
-                            </picture>
+                        <div class="thumb" data-about-swiper>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <picture>
+                                        <source media="(max-width: 1023px)" data-srcset="<?= get_template_directory_uri() ?>/assets/images/about/about_feature_03.webp">
+                                        <img class="lazy" draggable="false" data-src="<?= get_template_directory_uri() ?>/assets/images/about/about_feature_03.webp" alt="いちばんの今日を、ここで。"
+                                            width="893" height="596">
+                                    </picture>
+                                </div>
+                                <div class="swiper-slide">
+                                    <picture>
+                                        <source media="(max-width: 1023px)" data-srcset="<?= get_template_directory_uri() ?>/assets/images/about/about_feature_04.webp">
+                                        <img class="lazy" draggable="false" data-src="<?= get_template_directory_uri() ?>/assets/images/about/about_feature_04.webp" alt="いちばんの今日を、ここで。"
+                                            width="893" height="596">
+                                    </picture>
+                                </div>
+                            </div>
                         </div>
-                        <div class="about_fv_content" data-fadein>
+                        <div class="about_fv_content">
                             <div class="about_fv_desc">
                                 <p>城山幼稚園は、テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります（150字程度）
                                 </p>

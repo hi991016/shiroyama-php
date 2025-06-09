@@ -7,8 +7,8 @@
         <!-- thumbnail// -->
         <section class="c-thumbnail">
             <picture>
-                <source media="(max-width: 1023px)" data-srcset="<?= get_template_directory_uri() ?>/assets/images/daily/daily_thumb_sp.webp">
-                <img class="lazy" draggable="false" data-src="<?= get_template_directory_uri() ?>/assets/images/daily/daily_thumb.webp" alt="園の生活"
+                <source media="(max-width: 1023px)" data-srcset="<?= get_template_directory_uri() ?>/assets/images/gray.webpdaily_thumb_sp.webp">
+                <img class="lazy" draggable="false" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webpdaily_thumb.webp" alt="園の生活"
                     width="1300" height="550">
             </picture>
             <div class="c-thumbnail_heading">
@@ -37,7 +37,7 @@
                         <div class="daily_swiper_wrapper swiper-wrapper">
                             <div class="daily_swiper_slide swiper-slide">
                                 <figure>
-                                    <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/daily" alt="靴を揃える" draggable="false"
+                                    <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp" alt="靴を揃える" draggable="false"
                                         width="340" height="227">
                                 </figure>
                                 <h3>靴を揃える</h3>
@@ -47,7 +47,7 @@
                             </div>
                             <div class="daily_swiper_slide swiper-slide">
                                 <figure>
-                                    <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/daily" alt="挨拶をする" draggable="false"
+                                    <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp" alt="挨拶をする" draggable="false"
                                         width="340" height="227">
                                 </figure>
                                 <h3>挨拶をする</h3>
@@ -57,7 +57,7 @@
                             </div>
                             <div class="daily_swiper_slide swiper-slide">
                                 <figure>
-                                    <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/daily" alt="整理整頓" draggable="false"
+                                    <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp" alt="整理整頓" draggable="false"
                                         width="340" height="227">
                                 </figure>
                                 <h3>整理整頓</h3>
@@ -151,7 +151,7 @@
                                         <div class="daily_timeline_group">
                                             <h4 class="title">お支度 ＆ 自由遊び</h4>
                                             <figure>
-                                                <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/daily/" alt="お支度＆自由遊び"
+                                                <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp" alt="お支度＆自由遊び"
                                                     draggable="false" width="665" height="444">
                                             </figure>
                                             <div class="desc">
@@ -176,7 +176,7 @@
                                         <div class="daily_timeline_group">
                                             <h4 class="title">ラジオ体操 ＆ 朝かけっこ</h4>
                                             <figure>
-                                                <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/daily/" alt="ラジオ体操＆朝かけっこ"
+                                                <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp" alt="ラジオ体操＆朝かけっこ"
                                                     draggable="false" width="665" height="444">
                                             </figure>
                                             <div class="desc">
@@ -201,7 +201,7 @@
                                         <div class="daily_timeline_group">
                                             <h4 class="title">活動</h4>
                                             <figure>
-                                                <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/daily/" alt="活動"
+                                                <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp" alt="活動"
                                                     draggable="false" width="665" height="444">
                                             </figure>
                                             <div class="desc">
@@ -242,7 +242,7 @@
                                         <div class="daily_timeline_group">
                                             <h4 class="title">お昼</h4>
                                             <figure>
-                                                <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/daily/" alt="お昼"
+                                                <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp" alt="お昼"
                                                     draggable="false" width="665" height="444">
                                             </figure>
                                             <div class="desc">
@@ -283,7 +283,7 @@
                                         <div class="daily_timeline_group">
                                             <h4 class="title">自由遊び or 主活動</h4>
                                             <figure>
-                                                <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/daily/" alt="自由遊び or 主活動"
+                                                <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp" alt="自由遊び or 主活動"
                                                     draggable="false" width="665" height="444">
                                             </figure>
                                             <div class="desc">
@@ -395,7 +395,7 @@
                                                 <p>4月</p>
                                             </div>
                                             <figure>
-                                                <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/daily/" alt="入園式・進級式"
+                                                <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp" alt="入園式・進級式"
                                                     draggable="false" width="255" height="171">
                                             </figure>
                                             <h4>入園式・進級式</h4>
@@ -406,7 +406,7 @@
                                                 <p>5月</p>
                                             </div>
                                             <figure>
-                                                <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/daily/" alt="子どもの日集会"
+                                                <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp" alt="子どもの日集会"
                                                     draggable="false" width="255" height="171">
                                             </figure>
                                             <h4>子どもの日集会</h4>
@@ -422,14 +422,14 @@
                                     <div class="daily_event_inner">
                                         <div class="daily_event_content">
                                             <figure>
-                                                <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/daily/" alt="入園式・進級式"
+                                                <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp" alt="入園式・進級式"
                                                     draggable="false" width="255" height="171">
                                             </figure>
                                             <h4>入園式・進級式</h4>
                                         </div>
                                         <div class="daily_event_content">
                                             <figure>
-                                                <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/daily/" alt="子どもの日集会"
+                                                <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp" alt="子どもの日集会"
                                                     draggable="false" width="255" height="171">
                                             </figure>
                                             <h4>子どもの日集会</h4>
@@ -445,42 +445,42 @@
                                     <div class="daily_event_inner">
                                         <div class="daily_event_content">
                                             <figure>
-                                                <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/daily/" alt="七夕集会"
+                                                <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp" alt="七夕集会"
                                                     draggable="false" width="255" height="171">
                                             </figure>
                                             <h4>七夕集会</h4>
                                         </div>
                                         <div class="daily_event_content">
                                             <figure>
-                                                <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/daily/" alt="熊野カップ"
+                                                <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp" alt="熊野カップ"
                                                     draggable="false" width="255" height="171">
                                             </figure>
                                             <h4>熊野カップ</h4>
                                         </div>
                                         <div class="daily_event_content">
                                             <figure>
-                                                <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/daily/" alt="1学期終業式"
+                                                <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp" alt="1学期終業式"
                                                     draggable="false" width="255" height="171">
                                             </figure>
                                             <h4>1学期終業式</h4>
                                         </div>
                                         <div class="daily_event_content">
                                             <figure>
-                                                <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/daily/" alt="お泊り保育（年長）"
+                                                <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp" alt="お泊り保育（年長）"
                                                     draggable="false" width="255" height="171">
                                             </figure>
                                             <h4>お泊り保育（年長）</h4>
                                         </div>
                                         <div class="daily_event_content">
                                             <figure>
-                                                <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/daily/" alt="夏期保育（前期）"
+                                                <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp" alt="夏期保育（前期）"
                                                     draggable="false" width="255" height="171">
                                             </figure>
                                             <h4>夏期保育（前期）</h4>
                                         </div>
                                         <div class="daily_event_content">
                                             <figure>
-                                                <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/daily/" alt="夕涼み会"
+                                                <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp" alt="夕涼み会"
                                                     draggable="false" width="255" height="171">
                                             </figure>
                                             <h4>夕涼み会</h4>
@@ -496,7 +496,7 @@
                                     <div class="daily_event_inner">
                                         <div class="daily_event_content">
                                             <figure>
-                                                <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/daily/" alt="夏期保育（後期）"
+                                                <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp" alt="夏期保育（後期）"
                                                     draggable="false" width="255" height="171">
                                             </figure>
                                             <h4>夏期保育（後期）</h4>
@@ -512,21 +512,21 @@
                                     <div class="daily_event_inner">
                                         <div class="daily_event_content">
                                             <figure>
-                                                <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/daily/" alt="2学期始業式"
+                                                <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp" alt="2学期始業式"
                                                     draggable="false" width="255" height="171">
                                             </figure>
                                             <h4>2学期始業式</h4>
                                         </div>
                                         <div class="daily_event_content">
                                             <figure>
-                                                <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/daily/" alt="神輿担ぎ"
+                                                <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp" alt="神輿担ぎ"
                                                     draggable="false" width="255" height="171">
                                             </figure>
                                             <h4>神輿担ぎ</h4>
                                         </div>
                                         <div class="daily_event_content">
                                             <figure>
-                                                <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/daily/" alt="城山祭り（観劇会）"
+                                                <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp" alt="城山祭り（観劇会）"
                                                     draggable="false" width="255" height="171">
                                             </figure>
                                             <h4>城山祭り（観劇会）</h4>
@@ -542,14 +542,14 @@
                                     <div class="daily_event_inner">
                                         <div class="daily_event_content">
                                             <figure>
-                                                <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/daily/" alt="合同運動会（城山カップ）"
+                                                <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp" alt="合同運動会（城山カップ）"
                                                     draggable="false" width="255" height="171">
                                             </figure>
                                             <h4>合同運動会（城山カップ）</h4>
                                         </div>
                                         <div class="daily_event_content">
                                             <figure>
-                                                <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/daily/" alt="秋の遠足"
+                                                <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp" alt="秋の遠足"
                                                     draggable="false" width="255" height="171">
                                             </figure>
                                             <h4>秋の遠足</h4>
@@ -565,14 +565,14 @@
                                     <div class="daily_event_inner">
                                         <div class="daily_event_content">
                                             <figure>
-                                                <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/daily/" alt="参観日"
+                                                <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp" alt="参観日"
                                                     draggable="false" width="255" height="171">
                                             </figure>
                                             <h4>参観日</h4>
                                         </div>
                                         <div class="daily_event_content">
                                             <figure>
-                                                <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/daily/" alt="大根掘り"
+                                                <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp" alt="大根掘り"
                                                     draggable="false" width="255" height="171">
                                             </figure>
                                             <h4>大根掘り</h4>
@@ -588,14 +588,14 @@
                                     <div class="daily_event_inner">
                                         <div class="daily_event_content">
                                             <figure>
-                                                <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/daily/" alt="おもちつき"
+                                                <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp" alt="おもちつき"
                                                     draggable="false" width="255" height="171">
                                             </figure>
                                             <h4>おもちつき</h4>
                                         </div>
                                         <div class="daily_event_content">
                                             <figure>
-                                                <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/daily/" alt="2学期終業式"
+                                                <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp" alt="2学期終業式"
                                                     draggable="false" width="255" height="171">
                                             </figure>
                                             <h4>2学期終業式</h4>
@@ -611,14 +611,14 @@
                                     <div class="daily_event_inner">
                                         <div class="daily_event_content">
                                             <figure>
-                                                <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/daily/" alt="3学期始業式"
+                                                <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp" alt="3学期始業式"
                                                     draggable="false" width="255" height="171">
                                             </figure>
                                             <h4>3学期始業式</h4>
                                         </div>
                                         <div class="daily_event_content">
                                             <figure>
-                                                <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/daily/" alt="熊野カップ"
+                                                <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp" alt="熊野カップ"
                                                     draggable="false" width="255" height="171">
                                             </figure>
                                             <h4>熊野カップ</h4>
@@ -634,14 +634,14 @@
                                     <div class="daily_event_inner">
                                         <div class="daily_event_content">
                                             <figure>
-                                                <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/daily/" alt="豆まき集会"
+                                                <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp" alt="豆まき集会"
                                                     draggable="false" width="255" height="171">
                                             </figure>
                                             <h4>豆まき集会</h4>
                                         </div>
                                         <div class="daily_event_content">
                                             <figure>
-                                                <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/daily/" alt="学習発表会"
+                                                <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp" alt="学習発表会"
                                                     draggable="false" width="255" height="171">
                                             </figure>
                                             <h4>学習発表会</h4>
@@ -657,21 +657,21 @@
                                     <div class="daily_event_inner">
                                         <div class="daily_event_content">
                                             <figure>
-                                                <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/daily/" alt="卒園遠足（年長）"
+                                                <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp" alt="卒園遠足（年長）"
                                                     draggable="false" width="255" height="171">
                                             </figure>
                                             <h4>卒園遠足（年長）</h4>
                                         </div>
                                         <div class="daily_event_content">
                                             <figure>
-                                                <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/daily/" alt="3学期修了式"
+                                                <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp" alt="3学期修了式"
                                                     draggable="false" width="255" height="171">
                                             </figure>
                                             <h4>3学期修了式</h4>
                                         </div>
                                         <div class="daily_event_content">
                                             <figure>
-                                                <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/daily/" alt="卒園式"
+                                                <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp" alt="卒園式"
                                                     draggable="false" width="255" height="171">
                                             </figure>
                                             <h4>卒園式</h4>

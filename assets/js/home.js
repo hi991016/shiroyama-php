@@ -54,9 +54,9 @@ const initLoading = async () => {
 // ===== fv =====
 const swiperFv = new Swiper("[data-fv-swiper]", {
   effect: "fade",
-  speed: 2000,
+  speed: 2500,
   autoplay: {
-    delay: 2000,
+    delay: 3000,
     disableOnInteraction: false,
   },
   on: {

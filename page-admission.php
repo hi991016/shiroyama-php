@@ -160,7 +160,7 @@
                                     <div class="is-padl-sp">
                                         <figure class="c-feature_figure sp-only">
                                             <img class="lazy" draggable="false"
-                                                data-src="<?= get_template_directory_uri() ?>/assets/images/admission/admission_03.webp"
+                                                data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp"
                                                 alt="板橋区の「私立幼稚園保護者補助金」など、各種補助金を利用できます。" width="720" height="480">
                                         </figure>
                                     </div>
@@ -174,7 +174,7 @@
                                 <div class="c-feature_right pc-only">
                                     <figure class="c-feature_figure">
                                         <img class="lazy" draggable="false"
-                                            data-src="<?= get_template_directory_uri() ?>/assets/images/admission/admission_03.webp"
+                                            data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp"
                                             alt="板橋区の「私立幼稚園保護者補助金」など、各種補助金を利用できます。" width="720" height="480">
                                     </figure>
                                 </div>

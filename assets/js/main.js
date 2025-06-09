@@ -141,9 +141,9 @@ const [reservation, footer] = [
   window.addEventListener(evt, () => {
     const footerInView = footer.offsetTop;
     if (window.scrollY + window.innerHeight >= footerInView) {
-      reservation.classList.add("--hidden");
+      reservation?.classList.add("--hidden");
     } else {
-      reservation.classList.remove("--hidden");
+      reservation?.classList.remove("--hidden");
     }
   });
 });
@@ -199,6 +199,16 @@ const initTabs = () => {
   });
 };
 initTabs();
+
+// ===== about swiper =====
+const aboutSwiper = new Swiper("[data-about-swiper]", {
+  effect: "fade",
+  speed: 2500,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+});
 
 // ===== swiper components =====
 const swiperComponents = new Swiper("[data-swiper-components]", {
@@ -325,7 +335,4 @@ btnClear?.addEventListener("click", function () {
 //
 
 // ### ===== DOMCONTENTLOADED ===== ###
-window.addEventListener("pageshow", () => {
-  document.body.classList.remove("fadeout");
-});
 window.addEventListener("DOMContentLoaded", init);

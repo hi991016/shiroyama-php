@@ -42,7 +42,7 @@
                             <div class="support_for_items" data-fadein>
                                 <div class="is-pad-l">
                                     <figure>
-                                        <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/" alt="お預かり保育" draggable="false"
+                                        <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp" alt="お預かり保育" draggable="false"
                                             width="530" height="353">
                                     </figure>
                                 </div>
@@ -56,7 +56,7 @@
                             <div class="support_for_items" data-fadein>
                                 <div class="is-pad-l">
                                     <figure>
-                                        <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/" alt="課外教室" draggable="false"
+                                        <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp" alt="課外教室" draggable="false"
                                             width="530" height="353">
                                     </figure>
                                 </div>
@@ -88,7 +88,7 @@
                             <div class="support_for_items" data-fadein>
                                 <div class="is-pad-l">
                                     <figure>
-                                        <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/" alt="給食" draggable="false"
+                                        <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp" alt="給食" draggable="false"
                                             width="530" height="353">
                                     </figure>
                                 </div>
@@ -102,7 +102,7 @@
                             <div class="support_for_items" data-fadein>
                                 <div class="is-pad-l">
                                     <figure>
-                                        <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/" alt="ランドリーサービス" draggable="false"
+                                        <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp" alt="ランドリーサービス" draggable="false"
                                             width="530" height="353">
                                     </figure>
                                 </div>
@@ -116,7 +116,7 @@
                             <div class="support_for_items" data-fadein>
                                 <div class="is-pad-l">
                                     <figure>
-                                        <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/" alt="駐車場" draggable="false"
+                                        <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp" alt="駐車場" draggable="false"
                                             width="530" height="353">
                                     </figure>
                                 </div>
@@ -130,7 +130,7 @@
                             <div class="support_for_items" data-fadein>
                                 <div class="is-pad-l">
                                     <figure>
-                                        <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/" alt="れんらくアプリ" draggable="false"
+                                        <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp" alt="れんらくアプリ" draggable="false"
                                             width="530" height="353">
                                     </figure>
                                 </div>
@@ -152,7 +152,7 @@
                             <div class="support_for_items" data-fadein>
                                 <div class="is-pad-l">
                                     <figure>
-                                        <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/" alt="イベント保育（0〜3歳児対象）"
+                                        <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp" alt="イベント保育（0〜3歳児対象）"
                                             draggable="false" width="530" height="353">
                                     </figure>
                                 </div>
@@ -184,7 +184,7 @@
                             <div class="support_for_items" data-fadein>
                                 <div class="is-pad-l">
                                     <figure>
-                                        <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/" alt="一時預かり保育（0〜3歳児対象）"
+                                        <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp" alt="一時預かり保育（0〜3歳児対象）"
                                             draggable="false" width="530" height="353">
                                     </figure>
                                 </div>
@@ -224,7 +224,7 @@
                             <div class="support_for_items" data-fadein>
                                 <div class="is-pad-l">
                                     <figure>
-                                        <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/" alt="学童保育" draggable="false"
+                                        <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp" alt="学童保育" draggable="false"
                                             width="530" height="353">
                                     </figure>
                                 </div>
@@ -242,7 +242,7 @@
                     <div class="c-recruit_inner">
                         <div class="c-recruit_left pc-only">
                             <figure>
-                                <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/" alt="お子様の発達が気になる方へ" draggable="false" width="500" height="353">
+                                <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp" alt="お子様の発達が気になる方へ" draggable="false" width="500" height="353">
                             </figure>
                         </div>
                         <div class="c-recruit_right">
@@ -251,7 +251,7 @@
                             </div>
                             <div class="sp-only">
                                 <figure>
-                                    <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/" alt="お子様の発達が気になる方へ" draggable="false" width="500" height="353">
+                                    <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp" alt="お子様の発達が気になる方へ" draggable="false" width="500" height="353">
                                 </figure>
                             </div>
                             <div class="c-recruit_desc">

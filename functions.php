@@ -160,7 +160,8 @@
     // ========= custom pagination ==========
     function news_pagination($total_pages, $paged, $base_url) {
         if ($total_pages <= 1) return '';
-        $html = '<div class="news_pager newer">';
+        $html = '<div class="news_controls" data-fadein>';
+        $html .= '<div class="news_pager newer">';
         if ($paged > 1) {
             $prev_page = $paged - 1;
             $html .= sprintf('<a href="%s/page/%d/">＜ 新しい記事</a>', esc_url($base_url), $prev_page);
@@ -213,6 +214,7 @@
             $next_page = $paged + 1;
             $html .= sprintf('<a href="%s/page/%d/">古い記事 ＞</a>', esc_url($base_url), $next_page);
         }
+        $html .= '</div>';
         $html .= '</div>';
         $html .= '</div>';
         return $html;

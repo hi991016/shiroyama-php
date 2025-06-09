@@ -11,8 +11,8 @@
         <!-- thumbnail// -->
         <section class="c-thumbnail">
             <picture>
-                <source media="(max-width: 1023px)" data-srcset="<?= get_template_directory_uri() ?>/assets/images/education/">
-                <img class="lazy" draggable="false" data-src="<?= get_template_directory_uri() ?>/assets/images/education/"
+                <source media="(max-width: 1023px)" data-srcset="<?= get_template_directory_uri() ?>/assets/images/gray.webp">
+                <img class="lazy" draggable="false" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp"
                     alt="一歩進んだまなび" width="1300" height="550">
             </picture>
             <div class="c-thumbnail_heading">
@@ -72,14 +72,14 @@
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
                                     <figure>
-                                        <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/education/"
+                                        <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp"
                                             alt="キャプションが入りますキャプションが入ります" draggable="false" width="750" height="500">
                                     </figure>
                                     <p>キャプションが入りますキャプションが入ります</p>
                                 </div>
                                 <div class="swiper-slide">
                                     <figure>
-                                        <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/education/"
+                                        <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp"
                                             alt="キャプションが入りますキャプションが入ります" draggable="false" width="750" height="500">
                                     </figure>
                                     <p>キャプションが入りますキャプションが入ります</p>
@@ -106,14 +106,14 @@
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
                                     <figure>
-                                        <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/education/"
+                                        <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp"
                                             alt="キャプションが入りますキャプションが入ります" draggable="false" width="750" height="500">
                                     </figure>
                                     <p>キャプションが入りますキャプションが入ります</p>
                                 </div>
                                 <div class="swiper-slide">
                                     <figure>
-                                        <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/education/"
+                                        <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp"
                                             alt="キャプションが入りますキャプションが入ります" draggable="false" width="750" height="500">
                                     </figure>
                                     <p>キャプションが入りますキャプションが入ります</p>

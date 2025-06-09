@@ -97,9 +97,7 @@
                     </div>
                 </div>
 
-                <div class="news_controls" data-fadein>
-                    <?php echo news_pagination($the_query->max_num_pages, $paged, home_url('/news')); ?>
-                </div>
+                <?php echo news_pagination($the_query->max_num_pages, $paged, home_url('/news')); ?>
             </div>
         </section>
         <!-- //news -->

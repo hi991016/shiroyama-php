@@ -2,7 +2,7 @@
     <div data-fadein>
         <a href="/admission/2-years-old-class/" class="c-bnr_items">
             <figure>
-                <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/" alt="" draggable="false" width="540"
+                <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp" alt="" draggable="false" width="540"
                     height="220">
             </figure>
             <div class="c-bnr_content">
@@ -14,7 +14,7 @@
     <div data-fadein>
         <a href="http://" target="_blank" rel="noopener noreferrer" class="c-bnr_items">
             <figure>
-                <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/" alt="" draggable="false" width="540"
+                <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp" alt="" draggable="false" width="540"
                     height="220">
             </figure>
             <div class="c-bnr_content">

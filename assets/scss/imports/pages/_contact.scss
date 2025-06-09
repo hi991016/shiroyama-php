@@ -29,10 +29,6 @@
       position: relative;
       margin-top: 30px;
 
-      &:first-child {
-        margin-top: initial;
-      }
-
       @include maxW(1023px) {
         display: block;
         margin-top: 25px;

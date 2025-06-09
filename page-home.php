@@ -186,6 +186,15 @@
                                             width="1100" height="733">
                                     </picture>
                                 </div>
+                                <div class="swiper-slide">
+                                    <picture>
+                                        <source media="(max-width: 1023px)"
+                                            data-srcset="<?= get_template_directory_uri() ?>/assets/images/home/fv_slide_02.webp">
+                                        <img class="lazy" draggable="false"
+                                            data-src="<?= get_template_directory_uri() ?>/assets/images/home/fv_slide_02.webp" alt="いちばんの今日を、ここで。"
+                                            width="1100" height="733">
+                                    </picture>
+                                </div>
                             </div>
                             <div class="phy_pagination swiper-pagination"></div>
                             <div class="phy_heading">
@@ -502,8 +511,8 @@
                             </h3>
                         </div>
                         <picture>
-                            <source media="(max-width: 1023px)" data-srcset="<?= get_template_directory_uri() ?>/assets/images/home/">
-                            <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/home" alt="" draggable="false" width="540"
+                            <source media="(max-width: 1023px)" data-srcset="<?= get_template_directory_uri() ?>/assets/images/gray.webp">
+                            <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp" alt="" draggable="false" width="540"
                                 height="392">
                         </picture>
                     </div>

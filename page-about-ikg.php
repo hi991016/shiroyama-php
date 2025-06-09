@@ -19,6 +19,18 @@
                 <h2>石川キンダー学園について</h2>
                 <p>ISHIKAWA KINDER GAKUEN</p>
             </div>
+            <div class="c-thumbnail_logo">
+                <svg id="Group_229" data-name="Group 229" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="164.386" height="100" viewBox="0 0 164.386 100">
+                    <defs>
+                        <clipPath id="clip-path-about-logo">
+                        <rect id="Rectangle_76" data-name="Rectangle 76" width="164.386" height="100" fill="#fff"/>
+                        </clipPath>
+                    </defs>
+                    <g id="Group_191" data-name="Group 191" clip-path="url(#clip-path-about-logo)">
+                        <path id="Path_65" data-name="Path 65" d="M43.458,43.04c3.793,35.2,7.378,51.136,10.753,56.96H0c3.374-5.824,6.959-21.758,10.752-56.96C14.289,10.208,9.417,1.808,7.638,0H46.571c-1.777,1.808-6.651,10.208-3.113,43.04M101.659,0H62.727C64.5,1.808,69.377,10.208,65.84,43.04c-3.794,35.2-7.378,51.136-10.753,56.96H109.3c-3.374-5.824-6.959-21.758-10.753-56.96C95.008,10.208,99.881,1.808,101.659,0m51.975,43.04C150.1,10.208,154.969,1.808,156.747,0H117.814c1.778,1.808,6.651,10.208,3.113,43.04-3.793,35.2-7.378,51.136-10.752,56.96h54.211c-3.375-5.824-6.96-21.758-10.753-56.96" fill="#fff"/>
+                    </g>
+                </svg>
+            </div>
         </section>
         <!-- //thumbnail -->
 
@@ -30,8 +42,8 @@
                         <div class="ishikawa_group">
                             <div class="ishikawa_thumb" data-fadein>
                                 <picture class="--square-sp">
-                                    <source media="(max-width: 1023px)" data-srcset="<?= get_template_directory_uri() ?>/assets/images/about/">
-                                    <img class="lazy" draggable="false" data-src="<?= get_template_directory_uri() ?>/assets/images/about/" alt="こころのきほん"
+                                    <source media="(max-width: 1023px)" data-srcset="<?= get_template_directory_uri() ?>/assets/images/gray.webp">
+                                    <img class="lazy" draggable="false" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp" alt="こころのきほん"
                                         width="900" height="600">
                                 </picture>
                                 <div class="ishikawa_thumb_txt">
@@ -91,8 +103,8 @@
                             </div>
                             <div class="ishikawa_thumb" data-fadein>
                                 <picture>
-                                    <source media="(max-width: 1023px)" data-srcset="<?= get_template_directory_uri() ?>/assets/images/about/">
-                                    <img class="lazy" draggable="false" data-src="<?= get_template_directory_uri() ?>/assets/images/about/" alt="こころのきほん"
+                                    <source media="(max-width: 1023px)" data-srcset="<?= get_template_directory_uri() ?>/assets/images/gray.webp">
+                                    <img class="lazy" draggable="false" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp" alt="こころのきほん"
                                         width="900" height="600">
                                 </picture>
                             </div>
@@ -136,8 +148,8 @@
                             <div class="ishikawa_feature">
                                 <div class="ishikawa_feature_left" data-fadein>
                                     <picture class="--square-sp">
-                                        <source media="(max-width: 1023px)" data-srcset="<?= get_template_directory_uri() ?>/assets/images/about/">
-                                        <img class="lazy" draggable="false" data-src="<?= get_template_directory_uri() ?>/assets/images/about/" alt="理事長より"
+                                        <source media="(max-width: 1023px)" data-srcset="<?= get_template_directory_uri() ?>/assets/images/gray.webp">
+                                        <img class="lazy" draggable="false" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp" alt="理事長より"
                                             width="410" height="547">
                                     </picture>
                                 </div>
@@ -262,7 +274,7 @@
                     <div class="c-recruit_inner">
                         <div class="c-recruit_left pc-only">
                             <figure>
-                                <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/about/" alt="採用について" draggable="false"
+                                <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp" alt="採用について" draggable="false"
                                     width="500" height="353">
                             </figure>
                         </div>
@@ -272,7 +284,7 @@
                             </div>
                             <div class="sp-only">
                                 <figure>
-                                    <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/about/" alt="採用について" draggable="false"
+                                    <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp" alt="採用について" draggable="false"
                                         width="500" height="353">
                                 </figure>
                             </div>

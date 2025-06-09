@@ -11,8 +11,8 @@
         <!-- thumbnail// -->
         <section class="c-thumbnail">
             <picture>
-                <source media="(max-width: 1023px)" data-srcset="<?= get_template_directory_uri() ?>/assets/images/support/">
-                <img class="lazy" draggable="false" data-src="<?= get_template_directory_uri() ?>/assets/images/support/"
+                <source media="(max-width: 1023px)" data-srcset="<?= get_template_directory_uri() ?>/assets/images/gray.webp">
+                <img class="lazy" draggable="false" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp"
                     alt="課外教室一覧" width="1300" height="550">
             </picture>
             <div class="c-thumbnail_heading">
@@ -39,7 +39,7 @@
                 <div class="support_school">
                     <div class="support_school_items" data-fadein>
                         <figure>
-                            <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/" alt="パズル教室" draggable="false" width="340"
+                            <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp" alt="パズル教室" draggable="false" width="340"
                                 height="227">
                         </figure>
                         <h3>パズル教室</h3>
@@ -49,7 +49,7 @@
                     </div>
                     <div class="support_school_items" data-fadein>
                         <figure>
-                            <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/" alt="セントラルプール" draggable="false" width="340"
+                            <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp" alt="セントラルプール" draggable="false" width="340"
                                 height="227">
                         </figure>
                         <h3>セントラルプール</h3>
@@ -59,7 +59,7 @@
                     </div>
                     <div class="support_school_items" data-fadein>
                         <figure>
-                            <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/" alt="英会話教室" draggable="false" width="340"
+                            <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp" alt="英会話教室" draggable="false" width="340"
                                 height="227">
                         </figure>
                         <h3>英会話教室</h3>
@@ -69,7 +69,7 @@
                     </div>
                     <div class="support_school_items" data-fadein>
                         <figure>
-                            <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/" alt="サッカー教室" draggable="false" width="340"
+                            <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp" alt="サッカー教室" draggable="false" width="340"
                                 height="227">
                         </figure>
                         <h3>サッカー教室</h3>
@@ -79,7 +79,7 @@
                     </div>
                     <div class="support_school_items" data-fadein>
                         <figure>
-                            <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/" alt="ピアノ教室" draggable="false" width="340"
+                            <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp" alt="ピアノ教室" draggable="false" width="340"
                                 height="227">
                         </figure>
                         <h3>ピアノ教室</h3>
@@ -89,7 +89,7 @@
                     </div>
                     <div class="support_school_items" data-fadein>
                         <figure>
-                            <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/" alt="体操教室" draggable="false" width="340"
+                            <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp" alt="体操教室" draggable="false" width="340"
                                 height="227">
                         </figure>
                         <h3>体操教室</h3>
@@ -99,7 +99,7 @@
                     </div>
                     <div class="support_school_items" data-fadein>
                         <figure>
-                            <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/" alt="空手教室" draggable="false" width="340"
+                            <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp" alt="空手教室" draggable="false" width="340"
                                 height="227">
                         </figure>
                         <h3>空手教室</h3>
@@ -109,7 +109,7 @@
                     </div>
                     <div class="support_school_items" data-fadein>
                         <figure>
-                            <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/" alt="チアダンス教室" draggable="false" width="340"
+                            <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp" alt="チアダンス教室" draggable="false" width="340"
                                 height="227">
                         </figure>
                         <h3>チアダンス教室</h3>
@@ -119,7 +119,7 @@
                     </div>
                     <div class="support_school_items" data-fadein>
                         <figure>
-                            <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/" alt="新体操教室" draggable="false" width="340"
+                            <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp" alt="新体操教室" draggable="false" width="340"
                                 height="227">
                         </figure>
                         <h3>新体操教室</h3>
@@ -129,7 +129,7 @@
                     </div>
                     <div class="support_school_items" data-fadein>
                         <figure>
-                            <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/" alt="思考⼒教室" draggable="false" width="340"
+                            <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp" alt="思考⼒教室" draggable="false" width="340"
                                 height="227">
                         </figure>
                         <h3>思考⼒教室</h3>

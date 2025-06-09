@@ -48,7 +48,7 @@
                                     <div class="is-padl-sp">
                                         <figure class="c-feature_figure sp-only">
                                             <img class="lazy" draggable="false"
-                                                data-src="<?= get_template_directory_uri() ?>/assets/images/admission/"
+                                                data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp"
                                                 alt="保育見学会" width="720" height="480">
                                         </figure>
                                     </div>
@@ -79,7 +79,7 @@
                                 <div class="c-feature_right pc-only">
                                     <figure class="c-feature_figure">
                                         <img class="lazy" draggable="false"
-                                            data-src="<?= get_template_directory_uri() ?>/assets/images/admission/"
+                                            data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp"
                                             alt="保育見学会" width="720" height="480">
                                     </figure>
                                 </div>
@@ -98,7 +98,7 @@
                                     <div class="is-padl-sp">
                                         <figure class="c-feature_figure sp-only">
                                             <img class="lazy" draggable="false"
-                                                data-src="<?= get_template_directory_uri() ?>/assets/images/admission/"
+                                                data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp"
                                                 alt="入園説明会" width="720" height="480">
                                         </figure>
                                     </div>
@@ -129,7 +129,7 @@
                                 <div class="c-feature_right pc-only">
                                     <figure class="c-feature_figure">
                                         <img class="lazy" draggable="false"
-                                            data-src="<?= get_template_directory_uri() ?>/assets/images/admission/"
+                                            data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp"
                                             alt="入園説明会" width="720" height="480">
                                     </figure>
                                 </div>
@@ -148,7 +148,7 @@
                                     <div class="is-padl-sp">
                                         <figure class="c-feature_figure sp-only">
                                             <img class="lazy" draggable="false"
-                                                data-src="<?= get_template_directory_uri() ?>/assets/images/admission/"
+                                                data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp"
                                                 alt="未就園児向けキッズイベント" width="720" height="480">
                                         </figure>
                                     </div>
@@ -179,7 +179,7 @@
                                 <div class="c-feature_right pc-only">
                                     <figure class="c-feature_figure">
                                         <img class="lazy" draggable="false"
-                                            data-src="<?= get_template_directory_uri() ?>/assets/images/admission/"
+                                            data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp"
                                             alt="未就園児向けキッズイベント" width="720" height="480">
                                     </figure>
                                 </div>

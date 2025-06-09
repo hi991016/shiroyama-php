@@ -39,9 +39,44 @@
             var config = {
                 kitId: 'nup0vov',
                 scriptTimeout: 3000,
-                async: true
+                async: true,
+                active: function() {
+                    document.body.classList.remove("fadeout");
+                }
             },
-                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+                h = d.documentElement, 
+                t = setTimeout(function () { 
+                    h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; 
+                    document.body.classList.remove("fadeout"); // Remove fadeout if timeout occurs
+                }, config.scriptTimeout), 
+                tk = d.createElement("script"), 
+                f = false, 
+                s = d.getElementsByTagName("script")[0], 
+                a; 
+            h.className += " wf-loading"; 
+            tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; 
+            tk.async = true; 
+            tk.onload = tk.onreadystatechange = function () { 
+                a = this.readyState; 
+                if (f || a && a != "complete" && a != "loaded") return; 
+                f = true; 
+                clearTimeout(t); 
+                try { Typekit.load(config) } catch (e) { 
+                    document.body.classList.remove("fadeout"); // Remove fadeout on error
+                } 
+            }; 
+            s.parentNode.insertBefore(tk, s);
+
+            // Check font status on page load (for bfcache/back button)
+            window.addEventListener("pageshow", function() {
+                if (!h.className.includes("wf-loading")) {
+                    document.body.classList.remove("fadeout");
+                } else {
+                    setTimeout(function () {
+                        document.body.classList.remove('fadeout');
+                    }, 3000);
+                }
+            });
         })(document);
     </script>
 
@@ -110,6 +145,17 @@
      <?php endif; ?>
 
     <!-- @reservation -->
+    <?php
+        global $show_reservation;
+        $show_reservation = true;
+        $exclude_pages = ['contact', 'tour'];
+
+        if (is_page($exclude_pages)) {
+            $show_reservation = false;
+        }
+        
+        if ($show_reservation) :
+    ?>
     <a class="c-reservation" href="<?= home_url(); ?>/admission/tour/" data-reservation>
         <div class="c-reservation_container">
             <div class="content">
@@ -130,6 +176,7 @@
             </div>
         </div>
     </a>
+    <?php endif; ?>
     <!-- @@reservation -->
 
     <!-- @sidebar -->
@@ -241,7 +288,7 @@
     <!-- @sidebar -->
 
     <!-- @header -->
-     <?php
+    <?php
         global $black_header;
         $black_header = isset($black_header) ? $black_header : false;
 

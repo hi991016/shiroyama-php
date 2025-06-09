@@ -821,6 +821,13 @@
     }
   }
 
+  &_logo {
+    position: absolute;
+    right: 55px;
+    bottom: 50px;
+    z-index: 3;
+  }
+
   @include maxW(1023px) {
     picture {
       padding-bottom: 100%;
@@ -841,6 +848,16 @@
       p {
         font-size: 1.4rem;
         margin-top: 7px;
+      }
+    }
+
+    &_logo {
+      right: 25px;
+      bottom: 25px;
+
+      svg {
+        width: 82px;
+        height: auto;
       }
     }
   }

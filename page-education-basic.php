@@ -11,8 +11,8 @@
         <!-- thumbnail// -->
         <section class="c-thumbnail">
             <picture>
-                <source media="(max-width: 1023px)" data-srcset="<?= get_template_directory_uri() ?>/assets/images/education/">
-                <img class="lazy" draggable="false" data-src="<?= get_template_directory_uri() ?>/assets/images/education/" alt="まなび"
+                <source media="(max-width: 1023px)" data-srcset="<?= get_template_directory_uri() ?>/assets/images/gray.webp">
+                <img class="lazy" draggable="false" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp" alt="まなび"
                     width="1300" height="550">
             </picture>
             <div class="c-thumbnail_heading">
@@ -81,7 +81,7 @@
                                         </div>
                                     </div>
                                     <figure>
-                                        <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/education/" alt="読み"
+                                        <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp" alt="読み"
                                             draggable="false" width="825" height="550">
                                     </figure>
                                     <div class="basic_tabs_desc">
@@ -99,7 +99,7 @@
                                         </div>
                                     </div>
                                     <figure>
-                                        <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/education/" alt="読み"
+                                        <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp" alt="読み"
                                             draggable="false" width="825" height="550">
                                     </figure>
                                     <div class="basic_tabs_desc">
@@ -117,7 +117,7 @@
                                         </div>
                                     </div>
                                     <figure>
-                                        <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/education/" alt="計算"
+                                        <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp" alt="計算"
                                             draggable="false" width="825" height="550">
                                     </figure>
                                     <div class="basic_tabs_desc">
@@ -135,7 +135,7 @@
                                         </div>
                                     </div>
                                     <figure>
-                                        <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/education/" alt="体操"
+                                        <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp" alt="体操"
                                             draggable="false" width="825" height="550">
                                     </figure>
                                     <div class="basic_tabs_desc">
@@ -153,7 +153,7 @@
                                         </div>
                                     </div>
                                     <figure>
-                                        <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/education/" alt="かけっこ"
+                                        <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp" alt="かけっこ"
                                             draggable="false" width="825" height="550">
                                     </figure>
                                     <div class="basic_tabs_desc">
@@ -171,7 +171,7 @@
                                         </div>
                                     </div>
                                     <figure>
-                                        <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/education/" alt="音楽"
+                                        <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp" alt="音楽"
                                             draggable="false" width="825" height="550">
                                     </figure>
                                     <div class="basic_tabs_desc">

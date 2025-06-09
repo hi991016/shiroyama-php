@@ -32,7 +32,7 @@
                         </div>
                     </div>
                     <figure>
-                        <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/education/" alt="まなびに関するコピーが入ります"
+                        <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp" alt="まなびに関するコピーが入ります"
                             draggable="false" width="1100" height="600">
                     </figure>
                     <div class="education_fv_group">
@@ -59,7 +59,7 @@
                                     </h3>
                                     <div class="is-padl-sp">
                                         <figure class="c-feature_figure sp-only">
-                                            <img class="lazy" draggable="false" data-src="<?= get_template_directory_uri() ?>/assets/images/education/"
+                                            <img class="lazy" draggable="false" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp"
                                                 alt="きほんのまなびに関するコピーが入ります" width="720" height="480">
                                         </figure>
                                     </div>
@@ -89,7 +89,7 @@
                                 </div>
                                 <div class="c-feature_right pc-only">
                                     <figure class="c-feature_figure">
-                                        <img class="lazy" draggable="false" data-src="<?= get_template_directory_uri() ?>/assets/images/education/"
+                                        <img class="lazy" draggable="false" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp"
                                             alt="きほんのまなびに関するコピーが入ります" width="720" height="480">
                                     </figure>
                                 </div>
@@ -105,7 +105,7 @@
                                     </h3>
                                     <div class="is-padl-sp">
                                         <figure class="c-feature_figure sp-only">
-                                            <img class="lazy" draggable="false" data-src="<?= get_template_directory_uri() ?>/assets/images/education/"
+                                            <img class="lazy" draggable="false" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp"
                                                 alt="一歩進んだまなびに関するコピーが入ります" width="720" height="480">
                                         </figure>
                                     </div>
@@ -135,7 +135,7 @@
                                 </div>
                                 <div class="c-feature_right pc-only">
                                     <figure class="c-feature_figure">
-                                        <img class="lazy" draggable="false" data-src="<?= get_template_directory_uri() ?>/assets/images/education/"
+                                        <img class="lazy" draggable="false" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp"
                                             alt="一歩進んだまなびに関するコピーが入ります" width="720" height="480">
                                     </figure>
                                 </div>
@@ -196,7 +196,7 @@
                     <div class="c-recruit_inner">
                         <div class="c-recruit_left pc-only">
                             <figure>
-                                <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/" alt="採用について" draggable="false" width="500"
+                                <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp" alt="採用について" draggable="false" width="500"
                                     height="353">
                             </figure>
                         </div>
@@ -206,7 +206,7 @@
                             </div>
                             <div class="sp-only">
                                 <figure>
-                                    <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/" alt="課外教室について（有料/希望者のみ）"
+                                    <img class="lazy" data-src="<?= get_template_directory_uri() ?>/assets/images/gray.webp" alt="課外教室について（有料/希望者のみ）"
                                         draggable="false" width="500" height="353">
                                 </figure>
                             </div>

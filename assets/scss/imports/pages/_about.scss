@@ -99,7 +99,6 @@
       &_fv {
         picture {
           padding-bottom: 100% !important;
-          border-radius: 3px !important;
           aspect-ratio: 1/1;
         }
 
@@ -125,6 +124,10 @@
           .thumb {
             width: 85.507%;
             margin-left: auto;
+
+            picture {
+              border-radius: 3px 0 0 3px;
+            }
           }
         }
 
@@ -134,6 +137,10 @@
           .thumb {
             width: 66.184%;
             margin-top: -45px;
+
+            picture {
+              border-radius: 0 3px 3px 0;
+            }
           }
         }
 
