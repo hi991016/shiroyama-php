@@ -333,6 +333,40 @@ btnClear?.addEventListener("click", function () {
 });
 
 //
+document.addEventListener("DOMContentLoaded", function () {
+  const forms = document.querySelectorAll(".wpcf7-form");
+  forms.forEach((form) => {
+    let isSubmitting = false;
+    const submitButton = form.querySelector('input[type="submit"]');
+
+    form.addEventListener("submit", function (event) {
+      if (isSubmitting) {
+        event.preventDefault();
+        return;
+      }
+      isSubmitting = true;
+      submitButton.disabled = true;
+    });
+
+    // when validate fails
+    form.addEventListener("wpcf7invalid", function () {
+      isSubmitting = false;
+      submitButton.disabled = false;
+    });
+
+    // sent done
+    form.addEventListener("wpcf7mailsent", function () {
+      isSubmitting = false;
+      submitButton.disabled = true;
+    });
+
+    // sent fail
+    form.addEventListener("wpcf7mailfailed", function () {
+      isSubmitting = false;
+      submitButton.disabled = false;
+    });
+  });
+});
 
 // ### ===== DOMCONTENTLOADED ===== ###
 window.addEventListener("DOMContentLoaded", init);
